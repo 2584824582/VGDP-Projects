@@ -69,7 +69,6 @@ def handle_ball_move():
     global scoreLeft
     global scoreRight
     global ball_speed
-    global timer
     ball_rect.x += ball_speed[0]
     ball_rect.y += ball_speed[1]
 
@@ -88,7 +87,6 @@ def handle_ball_move():
         reset_ball()
         
 def reset_ball():
-    global timer
     ball_rect.center = (395, 295)
 
 #Define text
