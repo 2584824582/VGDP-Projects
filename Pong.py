@@ -9,6 +9,7 @@ window_Height = 600
 speed = 6
 scoreLeft = 0
 scoreRight = 0
+aiScore = 0
 screen = pygame.display.set_mode((window_Width, window_Height))
 pygame.display.set_caption("Pygame Pong")
 
@@ -101,6 +102,11 @@ def scoringBlack():
     text2 = font2.render(str(scoreRight), True, BLACK)
     textRect2 = text2.get_rect(center = (600, 50))
     screen.blit(text2, textRect2)
+
+    font15 = pygame.font.Font(None, 96)
+    text15 = font15.render(str(aiScore), True, BLACK)
+    textRect15 = text15.get_rect(center = (600, 50))
+    screen.blit(text15, textRect15)
     
 def scoringWhite():
     font6 = pygame.font.Font(None, 96)
@@ -112,6 +118,11 @@ def scoringWhite():
     text7 = font7.render(str(scoreRight), True, WHITE)
     textRect7 = text7.get_rect(center = (600, 50))
     screen.blit(text7, textRect7)
+
+    font16 = pygame.font.Font(None, 96)
+    text16 = font16.render(str(aiScore), True, WHITE)
+    textRect16 = text16.get_rect(center = (600, 50))
+    screen.blit(text16, textRect16)
     
 def PlayerText():
     font12 = pygame.font.Font(None, 40)
@@ -169,6 +180,17 @@ def endText4():
     textRect11 = text11.get_rect(center = (600, 150))
     screen.blit(text11, textRect11)
 
+def endText5(): 
+    font17 = pygame.font.Font(None, 40)
+    text17 = font17.render("AI Wins", True, WHITE)
+    textRect17 = text17.get_rect(center = (600, 150))
+    screen.blit(text17, textRect17)
+
+def endText6(): 
+    font18 = pygame.font.Font(None, 40)
+    text18 = font18.render("AI Wins", True, BLACK)
+    textRect18 = text18.get_rect(center = (600, 150))
+    screen.blit(text18, textRect18)
 #Game Loop Starts
 PlayerPick = True
 ThemePick = False
@@ -265,6 +287,10 @@ while BlackTheme == True:
         endText3()
         reset_ball()
         ball_speed = [0, 0]
+    if aiScore == 3:
+        endText5()
+        reset_ball()
+        ball_speed = [0, 0]
     pygame.draw.rect(screen, WHITE, paddleRight)
     pygame.draw.rect(screen, WHITE, paddleLeft)
     pygame.draw.circle(screen, WHITE, ball_rect.center, 20)
@@ -324,6 +350,10 @@ while WhiteTheme == True:
         ball_speed = [0, 0]
     if scoreRight == 3:
         endText4()
+        reset_ball()
+        ball_speed = [0, 0]
+    if aiScore == 3:
+        endText6()
         reset_ball()
         ball_speed = [0, 0]
     pygame.draw.rect(screen, BLACK, paddleRight)
