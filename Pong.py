@@ -10,6 +10,7 @@ speed = 6
 scoreLeft = 0
 scoreRight = 0
 aiScore = 0
+straight = True
 screen = pygame.display.set_mode((window_Width, window_Height))
 pygame.display.set_caption("Pygame Pong")
 
@@ -65,10 +66,33 @@ def ai_movement():
     elif ball_rect.y > paddleRight.centery:
         paddleRight.bottom += 3
 #2 Player Movement
-def handle_ball_move():
+def handle_ball_move_straight():
+    global ball_speed
+    global straight
+    global scoreLeft
+    global scoreRight
+    ball_rect.x += ball_speed[0]
+
+    if ball_rect.top <=0 or ball_rect.bottom>= 600:
+        ball_speed[1] = -ball_speed[1]
+
+    if ball_rect.colliderect(paddleLeft) or ball_rect.colliderect(paddleRight):
+        ball_speed[0] = -ball_speed[0]
+        straight = False
+    if ball_rect.left <= 0:
+        scoreRight += 1
+        straight = True
+        reset_ball()
+
+    if ball_rect.right >= 800:
+        scoreLeft += 1
+        straight = True
+        reset_ball()
+def handle_ball_move_sideways():
     global scoreLeft
     global scoreRight
     global ball_speed
+    global straight
     ball_rect.x += ball_speed[0]
     ball_rect.y += ball_speed[1]
 
@@ -80,10 +104,12 @@ def handle_ball_move():
 
     if ball_rect.left <= 0:
         scoreRight += 1
+        straight = True
         reset_ball()
 
     if ball_rect.right >= 800:
         scoreLeft += 1
+        straight = True
         reset_ball()
         
 def reset_ball():
@@ -184,7 +210,7 @@ def endText5():
     textRect17 = text17.get_rect(center = (600, 150))
     screen.blit(text17, textRect17)
 
-def endText6(): 
+def endText6():
     font18 = pygame.font.Font(None, 40)
     text18 = font18.render("AI Wins", True, BLACK)
     textRect18 = text18.get_rect(center = (600, 150))
@@ -275,7 +301,10 @@ while BlackTheme == True:
     for wall in walls:
         pygame.draw.rect(screen, WHITE, wall)
     draw_center_line_White()
-    handle_ball_move()
+    if straight == True:
+        handle_ball_move_straight()
+    if straight == False:
+        handle_ball_move_sideways()
     scoringWhite()
     if scoreLeft == 3:
         endText1()
@@ -340,7 +369,10 @@ while WhiteTheme == True:
         pygame.draw.rect(screen, BLACK, wall)
 
     draw_center_line_Black()
-    handle_ball_move()
+    if straight == True:
+        handle_ball_move_straight()
+    if straight == False:
+        handle_ball_move_sideways()
     scoringBlack()
     if scoreLeft == 3:
         endText2()
