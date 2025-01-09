@@ -27,7 +27,7 @@ paddle = pygame.Rect(350, 500, 100, 20)
 BLOCK_WIDTH = 70
 BLOCK_HEIGHT = 25
 BLOCK_MARGIN = 9
-BLOCK_ROWS_RED = 6
+BLOCK_ROWS = 6
 BLOCK_COLUMNS = 10
 
 #list of blocks
@@ -37,7 +37,7 @@ blocks = []
 colors = [RED, ORANGE, YELLOW, GREEN, BLUE, PURPLE]
 
 #Create the list
-for row in range(BLOCK_ROWS_RED):
+for row in range(BLOCK_ROWS):
   for col in range(BLOCK_COLUMNS):
     x = col * (BLOCK_WIDTH + BLOCK_MARGIN) + BLOCK_MARGIN
     y = row * (BLOCK_HEIGHT + BLOCK_MARGIN) + BLOCK_MARGIN
@@ -106,9 +106,7 @@ while running:
     screen.fill(WHITE)
     #Draw Shapes
     for block in blocks:
-        pygame.draw.rect(screen, color, block)
-    for color in colors:
-        pygame.draw.rect(screen, RED, block)
+      pygame.draw.rect(screen, RED, block)
     if straight == True:
       ball_movement_straight()
     if straight == False:
