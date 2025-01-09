@@ -79,6 +79,7 @@ def handle_ball_move_straight():
     if ball_rect.colliderect(paddleLeft) or ball_rect.colliderect(paddleRight):
         ball_speed[0] = -ball_speed[0]
         straight = False
+
     if ball_rect.left <= 0:
         scoreRight += 1
         straight = True
@@ -127,6 +128,7 @@ def scoringBlack():
     textRect2 = text2.get_rect(center = (600, 50))
     screen.blit(text2, textRect2)
 
+def aiScoringBlack():
     font15 = pygame.font.Font(None, 96)
     text15 = font15.render(str(aiScore), True, BLACK)
     textRect15 = text15.get_rect(center = (600, 50))
@@ -143,6 +145,7 @@ def scoringWhite():
     textRect7 = text7.get_rect(center = (600, 50))
     screen.blit(text7, textRect7)
 
+def aiScoringWhite():
     font16 = pygame.font.Font(None, 96)
     text16 = font16.render(str(aiScore), True, WHITE)
     textRect16 = text16.get_rect(center = (600, 50))
@@ -273,6 +276,7 @@ while BlackTheme == True:
         if keys[pygame.K_s]:
             paddleLeft.y += speed
         ai_movement()
+        aiScoringWhite()
     if playernumber == 2:
         if keys[pygame.K_UP]:
             paddleRight.y -= speed
@@ -298,6 +302,8 @@ while BlackTheme == True:
 
     screen.fill(BLACK)
     
+    scoringWhite()
+
     for wall in walls:
         pygame.draw.rect(screen, WHITE, wall)
     draw_center_line_White()
@@ -305,7 +311,7 @@ while BlackTheme == True:
         handle_ball_move_straight()
     if straight == False:
         handle_ball_move_sideways()
-    scoringWhite()
+    
     if scoreLeft == 3:
         endText1()
         reset_ball()
@@ -340,6 +346,7 @@ while WhiteTheme == True:
         if keys[pygame.K_s]:
             paddleLeft.y += speed
         ai_movement()
+        aiScoringBlack()
     if playernumber == 2:
         if keys[pygame.K_UP]:
             paddleRight.y -= speed
@@ -365,6 +372,8 @@ while WhiteTheme == True:
 
     screen.fill(WHITE)
 
+    scoringBlack()
+
     for wall in walls:
         pygame.draw.rect(screen, BLACK, wall)
 
@@ -373,7 +382,7 @@ while WhiteTheme == True:
         handle_ball_move_straight()
     if straight == False:
         handle_ball_move_sideways()
-    scoringBlack()
+    
     if scoreLeft == 3:
         endText2()
         reset_ball()
