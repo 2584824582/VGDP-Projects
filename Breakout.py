@@ -1,9 +1,10 @@
-import pygame, sys, random
+import pygame, sys
 
 #Initialize Pygame
 pygame.init()
 WIDTH = 800
 HEIGHT = 600
+playerlives = 3
 #Set up the game window
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Breakout Pygame")
@@ -33,7 +34,17 @@ BLOCK_COLUMNS = 10
 #list of blocks
 blocks = []
 
-#List of colors
+#Lives Text
+def lives():
+    font1 = pygame.font.Font(None, 48)
+    text1 = font1.render("Lives: ", True, BLACK)
+    text_rect1 = text1.get_rect(center = (75, 570))
+    screen.blit(text1, text_rect1)
+    
+    font2 = pygame.font.Font(None, 48)
+    text2 = font2.render(str(playerlives), True, BLACK)
+    text_rect2 = text2.get_rect(center = (135, 570))
+    screen.blit(text2, text_rect2)
 
 #Create the list
 for row in range(BLOCK_ROWS):
@@ -115,6 +126,9 @@ while running:
       ball_movement_straight()
     if straight == False:
       ball_movement_sideways()
+    lives()
+    if ball_rect.bottom > 590:
+        playerlives -= 1
     pygame.draw.rect(screen, BLACK, paddle)
     pygame.draw.circle(screen, BLACK, ball_rect.center, 10)
     for wall in walls:
