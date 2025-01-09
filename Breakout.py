@@ -1,4 +1,4 @@
-import pygame, sys
+import pygame, sys, random
 
 #Initialize Pygame
 pygame.init()
@@ -34,7 +34,6 @@ BLOCK_COLUMNS = 10
 blocks = []
 
 #List of colors
-colors = [RED, ORANGE, YELLOW, GREEN, BLUE, PURPLE]
 
 #Create the list
 for row in range(BLOCK_ROWS):
@@ -102,11 +101,16 @@ while running:
               paddle.x += speed
           if keys[pygame.K_RIGHT]:
               paddle.x -= speed
+    for block in blocks:
+        if ball_rect.colliderect(block):
+            blocks.remove(block)
+            ball_speed[1] = -ball_speed[1]
+            
 
     screen.fill(WHITE)
     #Draw Shapes
     for block in blocks:
-      pygame.draw.rect(screen, RED, block)
+        pygame.draw.rect(screen, RED, block)
     if straight == True:
       ball_movement_straight()
     if straight == False:
