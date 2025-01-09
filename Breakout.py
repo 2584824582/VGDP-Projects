@@ -33,6 +33,9 @@ BLOCK_COLUMNS = 10
 #list of blocks
 blocks = []
 
+#List of colors
+colors = [RED, ORANGE, YELLOW, GREEN, BLUE, PURPLE]
+
 #Create the list
 for row in range(BLOCK_ROWS_RED):
   for col in range(BLOCK_COLUMNS):
@@ -44,7 +47,7 @@ for row in range(BLOCK_ROWS_RED):
 #Draw Ball
 ball_speed = [5, 5]
 
-ball_rect = pygame.Rect(395, 295, 20, 20)
+ball_rect = pygame.Rect(395, 295, 20, 10)
 
 #Ball Movement
 def ball_movement_straight():
@@ -103,13 +106,15 @@ while running:
     screen.fill(WHITE)
     #Draw Shapes
     for block in blocks:
-      pygame.draw.rect(screen, RED, block)
+        pygame.draw.rect(screen, color, block)
+    for color in colors:
+        pygame.draw.rect(screen, RED, block)
     if straight == True:
       ball_movement_straight()
     if straight == False:
       ball_movement_sideways()
     pygame.draw.rect(screen, BLACK, paddle)
-    pygame.draw.circle(screen, BLACK, ball_rect.center, 20)
+    pygame.draw.circle(screen, BLACK, ball_rect.center, 10)
     for wall in walls:
       pygame.draw.rect(screen, BLACK, wall)
     pygame.display.flip()
