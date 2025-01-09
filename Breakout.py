@@ -23,6 +23,24 @@ speed = 5
 clock = pygame.time.Clock()
 paddle = pygame.Rect(350, 500, 100, 20)
 
+#Block dimensions for Colors
+BLOCK_WIDTH = 70
+BLOCK_HEIGHT = 25
+BLOCK_MARGIN = 9
+BLOCK_ROWS_RED = 6
+BLOCK_COLUMNS = 10
+
+#list of blocks
+blocks = []
+
+#Create the list
+for row in range(BLOCK_ROWS_RED):
+  for col in range(BLOCK_COLUMNS):
+    x = col * (BLOCK_WIDTH + BLOCK_MARGIN) + BLOCK_MARGIN
+    y = row * (BLOCK_HEIGHT + BLOCK_MARGIN) + BLOCK_MARGIN
+    block = pygame.Rect(x, y, BLOCK_WIDTH, BLOCK_HEIGHT)
+    blocks.append(block)
+
 #Draw Ball
 ball_speed = [5, 5]
 
@@ -84,6 +102,8 @@ while running:
 
     screen.fill(WHITE)
     #Draw Shapes
+    for block in blocks:
+      pygame.draw.rect(screen, RED, block)
     if straight == True:
       ball_movement_straight()
     if straight == False:
