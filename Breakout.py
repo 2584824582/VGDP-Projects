@@ -8,6 +8,7 @@ playerlives = 3
 #Set up the game window
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Breakout Pygame")
+bg = pygame.image.load('Space1.jpg')
 
 #Colors
 WHITE = (255, 255, 255)
@@ -38,23 +39,23 @@ blocks = []
 def livesText():
   global playerlives
   font1 = pygame.font.Font(None, 48)
-  text1 = font1.render("Lives: ", True, BLACK)
+  text1 = font1.render("Lives: ", True, WHITE)
   text_rect1 = text1.get_rect(center = (75, 570))
   screen.blit(text1, text_rect1)
   
   font2 = pygame.font.Font(None, 48)
-  text2 = font2.render(str(playerlives), True, BLACK)
+  text2 = font2.render(str(playerlives), True, WHITE)
   text_rect2 = text2.get_rect(center = (135, 570))
   screen.blit(text2, text_rect2)
 def endtextLose():
   font3 = pygame.font.Font(None, 48)
-  text3 = font3.render("You Lose!", True, BLACK)
-  text_rect3 = text3.get_rect(center = (395, 295))
+  text3 = font3.render("You Lose!", True, WHITE)
+  text_rect3 = text3.get_rect(center = (395, 270))
   screen.blit(text3, text_rect3)
 def endtextWin():
   font4 = pygame.font.Font(None, 48)
-  text4 = font4.render("You Win!!", True, BLACK)
-  text_rect4 = text4.get_rect(center = (395, 295))
+  text4 = font4.render("You Win!!", True, WHITE)
+  text_rect4 = text4.get_rect(center = (395, 270))
   screen.blit(text4, text_rect4)
 #Create the list
 for row in range(BLOCK_ROWS):
@@ -101,29 +102,17 @@ def ball_movement_sideways():
     ball_speed[1] = -ball_speed[1]
     playerlives -= 1
     reset_ball()
-  if paddle.x <= 300:
-    if ball_rect.top <= 10:
+    
+  if ball_rect.top <= 10:
      ball_speed[1] = -ball_speed[1]
 
-  if paddle.x <= 300:
-    if ball_rect.left <= 10 or ball_rect.right >= 790:
+  
+  if ball_rect.left <= 10 or ball_rect.right >= 790:
       ball_speed[0] = -ball_speed[0]
 
-  if paddle.x <= 300:
-    if ball_rect.colliderect(paddle):
+  if ball_rect.colliderect(paddle):
       ball_speed[1] = -ball_speed[1]
-  
-  if paddle.x >= 300:
-    if ball_rect.top <= 10:
-     ball_speed[1] = ball_speed[1]
-
-  if paddle.x >= 300:
-    if ball_rect.left <= 10 or ball_rect.right >= 790:
-      ball_speed[0] = ball_speed[0]
-
-  if paddle.x >= 300:
-    if ball_rect.colliderect(paddle):
-      ball_speed[1] = ball_speed[1]
+      
 #Border
 walls = [
   pygame.Rect(0, 0, 800, 10),  # Top horizontal wall
@@ -158,7 +147,7 @@ while running:
         ball_speed[1] = -ball_speed[1]
             
 
-    screen.fill(WHITE)
+    screen.blit(bg, (0, 0))
     #Draw Shapes
     for block in blocks:
         pygame.draw.rect(screen, RED, block)
@@ -172,10 +161,10 @@ while running:
       ball_speed = [0, 0]
     if len(blocks) == 0:
       endtextWin()
-    pygame.draw.rect(screen, BLACK, paddle)
-    pygame.draw.circle(screen, BLACK, ball_rect.center, 10)
+    pygame.draw.rect(screen, WHITE, paddle)
+    pygame.draw.circle(screen, WHITE, ball_rect.center, 10)
     for wall in walls:
-      pygame.draw.rect(screen, BLACK, wall)
+      pygame.draw.rect(screen, WHITE, wall)
     pygame.display.flip()
     clock.tick(30)
 pygame.quit()
