@@ -8,7 +8,6 @@ playerlives = 3
 #Set up the game window
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Breakout Pygame")
-bg = pygame.image.load('Space1.jpg')
 
 #Colors
 WHITE = (255, 255, 255)
@@ -19,6 +18,8 @@ YELLOW = (255, 255, 0)
 GREEN = (0, 255, 0)
 BLUE = (0, 0, 255)
 PURPLE = (128, 0, 128)
+Galaxy_image = pygame.image.load('Galaxy.jpg')
+blockimage = pygame.image.load('BlockImage.jpg')
 
 #Variables
 speed = 7
@@ -147,10 +148,10 @@ while running:
         ball_speed[1] = -ball_speed[1]
             
 
-    screen.blit(bg, (0, 0))
+    screen.blit(Galaxy_image, (0, 0))
     #Draw Shapes
     for block in blocks:
-        pygame.draw.rect(screen, RED, block)
+      pygame.draw.rect(screen, RED, block)
     if straight == True:
       ball_movement_straight()
     if straight == False:
