@@ -20,15 +20,16 @@ BLUE = (0, 0, 255)
 PURPLE = (128, 0, 128)
 Galaxy_image = pygame.image.load('Galaxy.jpg')
 blockimage = pygame.image.load('BlockImage.jpg')
+MrHaye = pygame.image.load('MRHAYE.jpg')
 
 #Variables
-speed = 7
+speed = 9
 clock = pygame.time.Clock()
 paddle = pygame.Rect(350, 500, 100, 20)
 
 #Block dimensions for Colors
-BLOCK_WIDTH = 70
-BLOCK_HEIGHT = 25
+BLOCK_WIDTH = 80
+BLOCK_HEIGHT = 45
 BLOCK_MARGIN = 9
 BLOCK_ROWS = 6
 BLOCK_COLUMNS = 10
@@ -69,7 +70,7 @@ for row in range(BLOCK_ROWS):
 #Draw Ball
 ball_speed = [7, 7]
 
-ball_rect = pygame.Rect(395, 295, 20, 10)
+ball_rect = pygame.Rect(395, 350, 20, 10)
 
 #Ball Movement
 def reset_ball():
@@ -152,6 +153,8 @@ while running:
     #Draw Shapes
     for block in blocks:
       pygame.draw.rect(screen, RED, block)
+      #screen.blit(blockimage, block) 
+      screen.blit(MrHaye, block)
     if straight == True:
       ball_movement_straight()
     if straight == False:
@@ -162,6 +165,8 @@ while running:
       ball_speed = [0, 0]
     if len(blocks) == 0:
       endtextWin()
+      reset_ball()
+      ball_speed [0, 0]
     pygame.draw.rect(screen, WHITE, paddle)
     pygame.draw.circle(screen, WHITE, ball_rect.center, 10)
     for wall in walls:
