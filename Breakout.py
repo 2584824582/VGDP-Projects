@@ -37,6 +37,12 @@ BLOCK_COLUMNS = 10
 #list of blocks
 blocks = []
 
+#list of buttons
+buttons = [
+    pygame.Rect(200, 250, 100, 50),
+    pygame.Rect(500, 250, 100, 50)
+]
+
 #Lives Text
 def livesText():
   global playerlives
@@ -122,13 +128,21 @@ walls = [
   pygame.Rect(0, 10, 10, 580),  # Left vertical wall
   pygame.Rect(790, 10, 10, 600), # Right vertical wall
 ]
-#Game loop
-running = True
+#Game loops
+Themepick = True
+gamescript = False
 straight = True
-while running:
+
+while ThemePick:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            running = False
+            Themepick = False
+    
+
+while gamescript:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            gamescript = False
           
     keys = pygame.key.get_pressed()
     if keys[pygame.K_LEFT]:
