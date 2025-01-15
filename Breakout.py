@@ -1,20 +1,15 @@
 import pygame, sys, pickle
-
 #Initialize Pygame
 pygame.init()
 WIDTH = 800
 HEIGHT = 600
 playerlives = 3
+score = 0
 #Set up the game window
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Breakout Pygame")
 
 #High Scores
-try:
-    with open('score.txt', 'rb') as file:
-        score = pickle.load(file)
-except:
-    score = 0
 #Colors
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
@@ -33,7 +28,11 @@ MrHaye = pygame.image.load('MRHAYE.jpg')
 speed = 9
 clock = pygame.time.Clock()
 paddle = pygame.Rect(350, 500, 100, 20)
-#highscoretxt = open('score.txt')
+#High Scores
+data = score
+file = open('score.txt', 'w')
+pickle.dump(data, file)
+file.close()
 #Block dimensions for Colors
 BLOCK_WIDTH = 80
 BLOCK_HEIGHT = 45
@@ -99,18 +98,19 @@ def scoring():
 
   font9 = pygame.font.Font(None, 48)
   text9 = font9.render(str(score), True, WHITE)
-  text_rect9 = text9.get_rect(center = (775, 570))
+  text_rect9 = text9.get_rect(center = (770, 570))
   screen.blit(text9, text_rect9)
-def highscore():
+def highscore1():
   font10 = pygame.font.Font(None, 48)
   text10 = font10.render("High Score: ", True, WHITE)
   text_rect10 = text10.get_rect(center = (400, 400))
   screen.blit(text10, text_rect10)
-
-  #font11 = pygame.font.Font(None, 48)
-  #text11 = font11.render(str(highscoretxt), True, WHITE)
-  #text_rect11 = text11.get_rect(center = (775, 570))
-  #screen.blit(text11, text_rect11)
+'''
+  font11 = pygame.font.Font(None, 48)
+  text11 = font11.render(str(highscore), True, WHITE)
+  text_rect11 = text11.get_rect(center = (775, 570))
+  screen.blit(text11, text_rect11)
+'''
 #Create the list
 for row in range(BLOCK_ROWS):
   for col in range(BLOCK_COLUMNS):
@@ -180,11 +180,10 @@ game_script_space = False
 game_script_haye = False
 straight = True
 
-while ThemePick:
+while ThemePick == True:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             ThemePick = False
-    score = 0
     button1 = buttons[0]
     button2 = buttons[1]
     screen.fill(WHITE)
@@ -203,11 +202,11 @@ while ThemePick:
                 break
     pygame.display.flip()
 
-while game_script_space:
+while game_script_space == True:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             game_script_space = False
-          
+
     keys = pygame.key.get_pressed()
     if keys[pygame.K_LEFT]:
         paddle.x -= speed
@@ -241,7 +240,7 @@ while game_script_space:
     livesText()
     if playerlives == 0:
       endtextLose()
-      highscore()
+      highscore1()
       ball_speed = [0, 0]
     if len(blocks) == 0:
       endtextWin()
@@ -254,7 +253,7 @@ while game_script_space:
     pygame.display.flip()
     clock.tick(30)
 
-while game_script_haye:
+while game_script_haye == True:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             game_script_haye = False
@@ -280,6 +279,7 @@ while game_script_haye:
             
 
     screen.blit(Galaxy_image, (0, 0))
+    
     #Draw Shapes
     scoring()
     for block in blocks:
@@ -292,7 +292,7 @@ while game_script_haye:
     livesText()
     if playerlives == 0:
       endtextLose()
-      highscore()
+      highscore1()
       ball_speed = [0, 0]
     if len(blocks) == 0:
       endtextWin()
@@ -304,7 +304,7 @@ while game_script_haye:
       pygame.draw.rect(screen, WHITE, wall)
     pygame.display.flip()
     clock.tick(30)
-with open('score.txt', 'wb') as file:
-    pickle.dump(score, file)
+file = open('score.txt', 'rb')
+data = pickle.load(file)
 pygame.quit()
 sys.exit()
