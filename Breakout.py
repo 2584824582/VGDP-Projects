@@ -1,4 +1,4 @@
-import pygame, sys, pickle
+import pygame, sys
 #Initialize Pygame
 pygame.init()
 WIDTH = 800
@@ -8,8 +8,11 @@ score = 0
 #Set up the game window
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Breakout Pygame")
-
-#High Scores
+scorecounter = "scorecounter.txt"
+#high Score Detection
+with open(scorecounter, "w") as s:
+   s.write(str(score))
+s = open(scorecounter, "r")
 #Colors
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
@@ -29,10 +32,6 @@ speed = 9
 clock = pygame.time.Clock()
 paddle = pygame.Rect(350, 500, 100, 20)
 #High Scores
-data = score
-file = open('score.txt', 'w')
-pickle.dump(data, file)
-file.close()
 #Block dimensions for Colors
 BLOCK_WIDTH = 80
 BLOCK_HEIGHT = 45
@@ -105,12 +104,12 @@ def highscore1():
   text10 = font10.render("High Score: ", True, WHITE)
   text_rect10 = text10.get_rect(center = (400, 400))
   screen.blit(text10, text_rect10)
-'''
+
   font11 = pygame.font.Font(None, 48)
-  text11 = font11.render(str(highscore), True, WHITE)
-  text_rect11 = text11.get_rect(center = (775, 570))
+  text11 = font11.render(str(s), True, WHITE)
+  text_rect11 = text11.get_rect(center = (500, 400))
   screen.blit(text11, text_rect11)
-'''
+
 #Create the list
 for row in range(BLOCK_ROWS):
   for col in range(BLOCK_COLUMNS):
@@ -304,7 +303,5 @@ while game_script_haye == True:
       pygame.draw.rect(screen, WHITE, wall)
     pygame.display.flip()
     clock.tick(30)
-file = open('score.txt', 'rb')
-data = pickle.load(file)
 pygame.quit()
 sys.exit()
