@@ -8,12 +8,14 @@ score = 0
 #Set up the game window
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Breakout Pygame")
-scorecounter = "scorecounter.txt"
+scorecounter = str("scorecounter.txt")
 #high Score Detection
-with open(scorecounter, "w") as s:
-   s.write(str(score))
-s = open(scorecounter, "r")
-#Colors
+def load_score():
+  with open(scorecounter, "r") as s:
+    s.read()
+def save_score():
+  with open(scorecounter, "w") as s:
+    s.write(str(score))
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
 RED = (255, 0, 0)
@@ -99,6 +101,7 @@ def scoring():
   text9 = font9.render(str(score), True, WHITE)
   text_rect9 = text9.get_rect(center = (770, 570))
   screen.blit(text9, text_rect9)
+
 def highscore1():
   font10 = pygame.font.Font(None, 48)
   text10 = font10.render("High Score: ", True, WHITE)
@@ -106,7 +109,7 @@ def highscore1():
   screen.blit(text10, text_rect10)
 
   font11 = pygame.font.Font(None, 48)
-  text11 = font11.render(str(s), True, WHITE)
+  text11 = font11.render(load_score(), True, WHITE)
   text_rect11 = text11.get_rect(center = (500, 400))
   screen.blit(text11, text_rect11)
 
@@ -139,7 +142,8 @@ def ball_movement_straight():
     ball_speed[1] = -ball_speed[1]
     playerlives -= 1
     reset_ball()
-    
+  if  ball_rect.top <= 10:
+     ball_speed[1] = -ball_speed[1]
 
   if ball_rect.colliderect(paddle):
     ball_speed[1] = -ball_speed[1]
@@ -228,7 +232,9 @@ while game_script_space == True:
 
     screen.blit(Galaxy_image, (0, 0))
     #Draw Shapes
+    
     scoring()
+    
     for block in blocks:
       pygame.draw.rect(screen, RED, block)
       screen.blit(blockimage, block)
@@ -238,13 +244,15 @@ while game_script_space == True:
       ball_movement_sideways()
     livesText()
     if playerlives == 0:
+      save_score()
       endtextLose()
       highscore1()
       ball_speed = [0, 0]
-    if len(blocks) == 0:
-      endtextWin()
-      reset_ball()
-      ball_speed [0, 0]
+    for block in blocks:
+      if len(blocks) == 0:
+        endtextWin()
+        reset_ball()
+        ball_speed [0, 0]
     pygame.draw.rect(screen, WHITE, paddle)
     pygame.draw.circle(screen, WHITE, ball_rect.center, 10)
     for wall in walls:
@@ -290,13 +298,15 @@ while game_script_haye == True:
       ball_movement_sideways()
     livesText()
     if playerlives == 0:
+      save_score()
       endtextLose()
       highscore1()
       ball_speed = [0, 0]
-    if len(blocks) == 0:
-      endtextWin()
-      reset_ball()
-      ball_speed [0, 0]
+    for block in blocks:
+      if len(blocks) == 0:
+        endtextWin()
+        reset_ball()
+        ball_speed [0, 0]
     pygame.draw.rect(screen, WHITE, paddle)
     pygame.draw.circle(screen, WHITE, ball_rect.center, 10)
     for wall in walls:
