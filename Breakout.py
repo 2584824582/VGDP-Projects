@@ -10,12 +10,22 @@ screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Breakout Pygame")
 scorecounter = str("scorecounter.txt")
 #high Score Detection
-def load_score():
-  with open(scorecounter, "r") as s:
-    s.read()
-def save_score():
-  with open(scorecounter, "w") as s:
-    s.write(str(score))
+def update_high_scores():
+    global score
+    filename = "scorecounter.txt"  # file must exist
+    with open(filename, "r") as file:
+        line = file.readline()  # scores are one line
+        high_scores = [int(s) for s in line.split()]  # read scores as integers
+    if score in high_scores:  # if current score already in high scores
+        return # no update needed
+
+    high_scores.append(score)  # add current score
+
+    high_scores.sort()  # sort scores  (low - high)
+
+    with open(filename, "w") as file:  # updates score file
+        for high_score in high_scores[::-1]:  # write scores in reverse (high - low)
+            file.write(str(high_score) + " ")
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
 RED = (255, 0, 0)
@@ -109,7 +119,7 @@ def highscore1():
   screen.blit(text10, text_rect10)
 
   font11 = pygame.font.Font(None, 48)
-  text11 = font11.render(load_score(), True, WHITE)
+  text11 = font11.render(max('scorecounter.txt'), True, WHITE)
   text_rect11 = text11.get_rect(center = (500, 400))
   screen.blit(text11, text_rect11)
 
@@ -244,7 +254,6 @@ while game_script_space == True:
       ball_movement_sideways()
     livesText()
     if playerlives == 0:
-      save_score()
       endtextLose()
       highscore1()
       ball_speed = [0, 0]
@@ -298,7 +307,6 @@ while game_script_haye == True:
       ball_movement_sideways()
     livesText()
     if playerlives == 0:
-      save_score()
       endtextLose()
       highscore1()
       ball_speed = [0, 0]
