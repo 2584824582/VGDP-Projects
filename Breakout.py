@@ -244,7 +244,7 @@ while game_script_space == True:
     #Draw Shapes
     
     scoring()
-    
+    update_high_scores()
     for block in blocks:
       pygame.draw.rect(screen, RED, block)
       screen.blit(blockimage, block)
@@ -258,7 +258,7 @@ while game_script_space == True:
       highscore1()
       ball_speed = [0, 0]
     for block in blocks:
-      if len(blocks) == 0:
+      if not blocks:
         endtextWin()
         reset_ball()
         ball_speed [0, 0]
@@ -298,6 +298,7 @@ while game_script_haye == True:
     
     #Draw Shapes
     scoring()
+    update_high_scores()
     for block in blocks:
       pygame.draw.rect(screen, RED, block) 
       screen.blit(MrHaye, block)
@@ -311,7 +312,7 @@ while game_script_haye == True:
       highscore1()
       ball_speed = [0, 0]
     for block in blocks:
-      if len(blocks) == 0:
+      if not blocks:
         endtextWin()
         reset_ball()
         ball_speed [0, 0]
