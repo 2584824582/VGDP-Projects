@@ -48,6 +48,7 @@ def checkplayersAI():
         time.sleep(2)
 
 def skipTeam():
+    global skip
     skip = 1
     print("Do you want to skip this team? Y/N")
     skipchoice = input()
@@ -56,11 +57,7 @@ def skipTeam():
         print("You skipped this team.")
         time.sleep(2)
         print(f"You have {skip} skips left.") 
-        time.sleep(2)
-        print("I'll draw a team for you.")
-        time.sleep(2)
-        randomTeamChoice = random.choice(teams)
-        print(f"The team I picked is: {randomTeamChoice}.")
+        
     elif skipchoice == "N" or skipchoice == "n":
         print("You didn't skip this team.")
         time.sleep(2)
@@ -87,16 +84,25 @@ def playerPick1():
     global your_position1
     global player1
     global availablePlayers
+    print("Round 1")
+    time.sleep(2)
     print("I'll draw a team for you.")
     time.sleep(2)
     randomTeamChoice = random.choice(teams)
     print(f"The team I picked is: {randomTeamChoice}.")
     time.sleep(2)
     skipTeam()
+    if skip == 0:
+        time.sleep(2)
+        print("I'll draw a team for you.")
+        time.sleep(2)
+        randomTeamChoice = random.choice(teams)
+        print(f"The team I picked is: {randomTeamChoice}.")
     print("You pick a position.")
     time.sleep(2)
     print("Which position do you want to pick: (C, RW, LW, Def, G) ")
     your_position1 = input()
+    checkpositionUser()
     print(f"You picked: {your_position1}.")
     time.sleep(2)
     availablePlayers = randomTeamChoice + your_position1
@@ -140,8 +146,20 @@ def AIPick1():
     print("Here is my team so far:")
     time.sleep(2)
     Teamlister2()
-
-
+    
+'''def playerPick2():
+    print("Round 2")
+    time.sleep(2)
+    print("I'll draw a team for you.")
+    time.sleep(2)
+    randomTeamChoice = random.choice(teams)
+    print(f"The team I picked is: {randomTeamChoice}.")
+    time.sleep(2)
+    skipTeam()
+    print("You pick a position.")
+    time.sleep(2)
+    print("Which position do you want to pick: (C, RW, LW, Def, G) ")
+'''
 
     
 
