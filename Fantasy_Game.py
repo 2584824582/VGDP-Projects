@@ -4,6 +4,14 @@ from NHLTeams import *
 import NHLTeams
 #import openai
 
+def checkPositionAI():
+    global aiplayer1
+    position = positions + randomPosition1
+    if position in globals():
+        print(f"Here are the available players: {globals()[position]}.")
+        AIPosition1 = random.choice(globals()[position])
+        time.sleep(2)
+
 def Teamlister1():
     print(team1)
 
@@ -13,6 +21,7 @@ def Teamlister2():
 def ListPositionPlayers():
     if availablePlayers in globals():
         print(f"Here are the available players: {globals()[availablePlayers]}.")
+        
 def checkplayersUser():
     if player1 not in NHLTeams.used_players:
         print(f"This player is available.")
@@ -22,9 +31,18 @@ def checkplayersUser():
         time.sleep(2)
         checkplayersUser()
 
+def checkpositionUser():
+    if your_position1 not in NHLTeams.used_Positions1:
+        print(f"This position is available.")
+        time.sleep(2)
+    elif your_position1 in NHLTeams.used_Positions1:
+        print("Please pick a different position. This position has been used.")
+        time.sleep(2)
+        checkpositionUser()
+
 def checkplayersAI():
     global aiplayer1
-    availablePlayers = randomTeamChoice + randomPosition1
+    availablePlayers = randomTeamChoiceAI + randomPosition1
     if availablePlayers in globals():
         print(f"Here are the available players: {globals()[availablePlayers]}.")
         aiplayer1 = random.choice(globals()[availablePlayers])
@@ -104,11 +122,12 @@ def AIPick1():
     global randomPosition1
     print("I'll draw a team for me.")
     time.sleep(2)
-    randomTeamChoice = random.choice(teams)
-    print(f"The team I picked is: {randomTeamChoice}.")
+    randomTeamChoiceAI = random.choice(teams)
+    print(f"The team I picked is: {randomTeamChoiceAI}.")
     time.sleep(2)
     print("I will now pick a position.")
     randomPosition1 = random.choice(positions)
+    checkPositionAI()
     print(f"I picked: {randomPosition1}.")
     time.sleep(2)
     checkplayersAI()
