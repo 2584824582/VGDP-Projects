@@ -5,7 +5,7 @@ import NHLTeams
 #import openai
 
 def checkPositionAI():
-    global aiplayer1
+    global AIPosition1
     if randomPosition1 in globals():
         print(f"Here are the available players: {globals()[position]}.")
         AIPosition1 = random.choice(globals()[position])
@@ -19,7 +19,7 @@ def Teamlister2():
 
 def ListPositionPlayers():
     if availablePlayers in globals():
-        print(f"Here are the available players: {globals()[availablePlayers]}.")
+        print(f"Here are the applicable players: {globals()[availablePlayers]}.")
         
 def checkplayersUser():
     if player1 not in NHLTeams.used_players:
@@ -31,6 +31,8 @@ def checkplayersUser():
         checkplayersUser()
 
 def checkpositionUser():
+    your_position2 = input()
+    print("Which position do you want to pick: (C, RW, LW, Def1, Def2, G) ")
     if your_position1 not in NHLTeams.used_Positions1:
         print(f"This position is available.")
         time.sleep(2)
@@ -40,11 +42,11 @@ def checkpositionUser():
         checkpositionUser()
 
 def checkplayersAI():
-    global aiplayer1
+    global AIplayer1
     availablePlayers = randomTeamChoiceAI + randomPosition1
     if availablePlayers in globals():
-        print(f"Here are the available players: {globals()[availablePlayers]}.")
-        aiplayer1 = random.choice(globals()[availablePlayers])
+        print(f"Here are the applicable players: {globals()[availablePlayers]}.")
+        AIplayer1 = random.choice(globals()[availablePlayers])
         time.sleep(2)
 
 def skipTeam():
@@ -64,19 +66,21 @@ def skipTeam():
         print(f"You have {skip} skips left.") 
         time.sleep(2)
 def rules():
-    print("You will play against me in a playerPick1 of NHL Fantasy!")
+    print("You will play against me in a game of NHL Fantasy!")
     time.sleep(3)
     print("I will draw a random team from the list of teams.")
     time.sleep(3)
-    print("The team that I pick will be the first team that I pick a player from.")
+    print("The team that I pick will be the first team that you pick a player from.")
     time.sleep(3)
-    print("Then I will pick another team and you pick a player from that team.")
+    print("Then I will pick another team and I will pick a player from that team.")
     time.sleep(3)
     print("Once a player is picked, neither team can pick that same player again.")
     time.sleep(3)
     print("You will get one skip if you don't ike the team that is picked.")
     time.sleep(3)
-    print("At the end, I will give you a link to ChatGPT and it will pick a winner!")
+    print("At the end, ChatGPT will pick a winner!")
+    time.sleep(3)
+    print("Good Luck!")
     playerPick1()
 
 def playerPick1():
@@ -100,8 +104,9 @@ def playerPick1():
         print(f"The team I picked is: {randomTeamChoice}.")
     print("You pick a position.")
     time.sleep(2)
-    print("Which position do you want to pick: (C, RW, LW, Def, G) ")
+    print("Which position do you want to pick: (C, RW, LW, Def1, Def2, G) ")
     your_position1 = input()
+    time.sleep(2)
     checkpositionUser()
     print(f"You picked: {your_position1}.")
     time.sleep(2)
@@ -111,6 +116,7 @@ def playerPick1():
     time.sleep(2)
     player1 = input()
     checkplayersUser()
+    time.sleep(2)
     print(f"You picked {player1} as your {your_position1}.")
     time.sleep(2)
     used_players.append(player1)
@@ -126,6 +132,7 @@ def playerPick1():
 def AIPick1():
     global randomPosition1
     global randomTeamChoiceAI
+    
     print("I'll draw a team for me.")
     time.sleep(2)
     randomTeamChoiceAI = random.choice(teams)
@@ -134,32 +141,55 @@ def AIPick1():
     print("I will now pick a position.")
     randomPosition1 = random.choice(positions)
     checkPositionAI()
+    time.sleep(2)
     print(f"I picked: {randomPosition1}.")
     time.sleep(2)
     checkplayersAI()
-    print(f"I picked {aiplayer1} as my {randomPosition1}.")
     time.sleep(2)
-    used_players.append(aiplayer1)
-    team2.append(aiplayer1)
+    print(f"I picked {AIplayer1} as my {randomPosition1}.")
+    time.sleep(2)
+    used_players.append(AIplayer1)
+    team2.append(AIplayer1)
     used_Positions2.append(randomPosition1)
     time.sleep(2)
     print("Here is my team so far:")
     time.sleep(2)
     Teamlister2()
+    playerPick2()
     
-'''def playerPick2():
+def playerPick2():
     print("Round 2")
     time.sleep(2)
     print("I'll draw a team for you.")
     time.sleep(2)
-    randomTeamChoice = random.choice(teams)
-    print(f"The team I picked is: {randomTeamChoice}.")
+    randomTeamChoice2 = random.choice(teams)
+    print(f"The team I picked is: {randomTeamChoice2}.")
     time.sleep(2)
     skipTeam()
     print("You pick a position.")
     time.sleep(2)
-    print("Which position do you want to pick: (C, RW, LW, Def, G) ")
-'''
+    print("Which position do you want to pick: (C, RW, LW, Def1, Def2, G) ")
+    your_position2 = input()
+    checkpositionUser()
+    print(f"You picked: {your_position2}.")
+    availablePlayers = randomTeamChoice2 + your_position2
+    ListPositionPlayers()
+    time.sleep(2)
+    player2 = input()
+    checkplayersUser()
+    time.sleep(2)
+    print(f"You picked {player2} as your {your_position2}.")
+    time.sleep(2)
+    used_players.append(player1)
+    team1.append(player1)
+    used_Positions1.append(your_position1)
+    time.sleep(2)
+    print("Here is your team so far:")
+    time.sleep(2)
+    Teamlister1()
+    time.sleep(2)
+
+
 
     
 
