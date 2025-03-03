@@ -5,7 +5,7 @@ teams = [
     "Panthers", "Kings", "Wild", "Canadiens", 
     "Predators", "Devils", "Islanders", "Rangers", 
     "Senators", "Flyers", "Penguins", "Sharks", 
-    "Kraken", "Blues", "Lightning", "Maple_Leafs", "Hockey_Club" 
+    "Kraken", "Blues", "Lightning", "Maple_Leafs", "Hockey_Club", 
     "Canucks", "Golden_Knights", "Capitals", "Jets"]
 positions = ["C", "RW", "LW", "Def", "G"]
 used_players = []
