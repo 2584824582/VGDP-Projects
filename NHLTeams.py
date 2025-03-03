@@ -7,6 +7,7 @@ teams = [
     "Senators", "Flyers", "Penguins", "Sharks", 
     "Kraken", "Blues", "Lightning", "Maple_Leafs", "Hockey_Club" 
     "Canucks", "Golden_Knights", "Capitals", "Jets"]
+positions = ["C", "RW", "LW", "Def", "G"]
 used_players = []
 used_Positions1 = []
 used_Positions2 = []
@@ -16,6 +17,7 @@ team1 = [
 team2 = [
 
 ]
+
 # Anaheim Ducks
 DucksC =  ["Trevor Zegras", "Ryan Strome", "Mason McTavish", "Leo Carlsson", "Isac Lundestrom", "Jansen Harkins"]
 DucksLW = ["Alex Killorn", "Brock McGinn", "Cutter Gauthier", "Ross Johnston", "Frank Vatrano"]
