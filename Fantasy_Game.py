@@ -6,8 +6,7 @@ import NHLTeams
 
 def checkPositionAI():
     global aiplayer1
-    position = positions + randomPosition1
-    if position in globals():
+    if randomPosition1 in globals():
         print(f"Here are the available players: {globals()[position]}.")
         AIPosition1 = random.choice(globals()[position])
         time.sleep(2)
@@ -120,6 +119,7 @@ def playerPick1():
 
 def AIPick1():
     global randomPosition1
+    global randomTeamChoiceAI
     print("I'll draw a team for me.")
     time.sleep(2)
     randomTeamChoiceAI = random.choice(teams)
