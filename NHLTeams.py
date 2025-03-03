@@ -57,7 +57,7 @@ BlackhawksC= ["Connor Bedard", "Teuvo Teravainen", "Philipp Kurashev", "Jason Di
 BlackhawksLW = ["Tyler Bertuzzi", "Taylor Hall", "Pat Maroon", "Lucas Reichel", "Andreas Athanasiou"]
 BlackhawksRW = ["Ilya Mikheyev", "Patrick Kane", "Tyler Johnson", "Reese Johnson", "Andreas Athanasiou"]
 BlackhawksDef = ["Connor Murphy", "Kevin Korchinski", "Alec Martinez", "Nolan Allan", "T.J. Brodie", "Louis Crevier", "Ethan Del Mastro", "Alex Vlasic"]
-BlackhawksG = ["Petr Mrazek", "Arvid Soderblom"]
+BlackhawksG = ["Petr Mrazek", "Arvid Soderblom", "Spencer Knight"]
 
 #Avalanche
 AvalancheC = ["Nathan MacKinnon", "Casey Mittelstadt", "Jack Drury", "Ross Colton", "Parker Kelly"]
@@ -99,7 +99,7 @@ PanthersC = ["Aleksander Barkov", "Sam Bennett", "Jesper Boqvist", "Anton Lundel
 PanthersLW = ["Matthew Tkachuk", "Ryan Lomberg"]
 PanthersRW = ["Sam Reinhart", "Evan Rodrigues"]
 PanthersDef = ["Aaron Ekblad", "Gustav Forsling", "Seth Jones", "Dmitri Kulikov", "Uvis Balinskis", "Tobias Bjornfot"]
-PanthersG = ["Sergei Bobrovsky", "Spencer Knight"]
+PanthersG = ["Sergei Bobrovsky"]
 
 #Kings
 KingsC = ["Anze Kopitar", "Phillip Danault", "Quinton Byfield", "Jack Studnicka"]
