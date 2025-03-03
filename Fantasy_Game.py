@@ -31,22 +31,23 @@ def checkplayersUser():
         checkplayersUser()
 
 def checkpositionUser():
-    your_position2 = input()
-    print("Which position do you want to pick: (C, RW, LW, Def1, Def2, G) ")
     if your_position1 not in NHLTeams.used_Positions1:
         print(f"This position is available.")
         time.sleep(2)
     elif your_position1 in NHLTeams.used_Positions1:
         print("Please pick a different position. This position has been used.")
         time.sleep(2)
-        checkpositionUser()
-
+        redoPosition()
+def redoPosition():
+    your_position2 = input()
+    print("Which position do you want to pick: (C, RW, LW, Def1, Def2, G) ")
+    checkpositionUser()
 def checkplayersAI():
     global AIplayer1
     availablePlayers = randomTeamChoiceAI + randomPosition1
     if availablePlayers in globals():
         print(f"Here are the applicable players: {globals()[availablePlayers]}.")
-        AIplayer1 = random.choice(globals()[availablePlayers])
+        firstAiPlayer = random.choice(globals()[availablePlayers])
         time.sleep(2)
 
 def skipTeam():
@@ -132,7 +133,7 @@ def playerPick1():
 def AIPick1():
     global randomPosition1
     global randomTeamChoiceAI
-    
+    global AIplayer1
     print("I'll draw a team for me.")
     time.sleep(2)
     randomTeamChoiceAI = random.choice(teams)
@@ -144,6 +145,7 @@ def AIPick1():
     time.sleep(2)
     print(f"I picked: {randomPosition1}.")
     time.sleep(2)
+    AIplayer1 = firstAiPlayer
     checkplayersAI()
     time.sleep(2)
     print(f"I picked {AIplayer1} as my {randomPosition1}.")
