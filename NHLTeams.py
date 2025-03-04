@@ -11,13 +11,6 @@ positions = ["C", "RW", "LW", "Def1", "Def2", "G"]
 used_players = []
 used_Positions1 = []
 used_Positions2 = []
-team1 = [
-
-]
-team2 = [
-
-]
-
 # Anaheim Ducks
 DucksC =  ["Trevor Zegras", "Ryan Strome", "Mason McTavish", "Leo Carlsson", "Isac Lundestrom", "Jansen Harkins"]
 DucksLW = ["Alex Killorn", "Brock McGinn", "Cutter Gauthier", "Ross Johnston", "Frank Vatrano"]
@@ -125,8 +118,8 @@ KingsG = ["Darcy Kuemper", "David Rittich"]
 WildC = ["Joel Eriksson Ek", "Frederick Gaudreau", "Brendan Gaunce", "Vinnie Hinostroza", "Marcus Johansson", "Jakub Lauko", "Gustav Nyquist", "Marco Rossi", "Devin Shore", "Yakov Trenin"]
 WildLW = ["Matt Boldy", "Kirill Kaprizov"]
 WildRW = ["Ryan Hartman", "Mats Zuccarello"]
-WildDef1 = ["Jonas Brodin", "Declan Chisholm", "Brock Faber", "Jon Merrill", "Jacob Middleton", "Jared Spurgeon" "Zach Bogosian"]
-WildDef2 = ["Jonas Brodin", "Declan Chisholm", "Brock Faber", "Jon Merrill", "Jacob Middleton", "Jared Spurgeon" "Zach Bogosian"]
+WildDef1 = ["Jonas Brodin", "Declan Chisholm", "Brock Faber", "Jon Merrill", "Jacob Middleton", "Jared Spurgeon", "Zach Bogosian"]
+WildDef2 = ["Jonas Brodin", "Declan Chisholm", "Brock Faber", "Jon Merrill", "Jacob Middleton", "Jared Spurgeon", "Zach Bogosian"]
 WildG = ["Marc-Andre Fleury", "Filip Gustavsson", "Jesper Wallstedt"]
 
 #Canadiens
@@ -221,8 +214,8 @@ BluesG = ["Jordan Binnington", "Joel Hofer"]
 LightningC = ["Anthony Cirelli", "Zemgus Girgensons", "Luke Glendening", "Brayden Point", "Jake Guentzel"]
 LightningLW = ["Mikey Eyssimont", "Brandon Hagel"]
 LightningRW = ["Cam Atkinson", "Mitchell Chaffee", "Nikita Kucherov"]
-LightningDef1 = ["Victor Hedman", "Mikhail Sergachev", "Erik Cernak", "Darren Raddysh"]
-LightningDef2 = ["Victor Hedman", "Mikhail Sergachev", "Erik Cernak", "Darren Raddysh"]
+LightningDef1 = ["Victor Hedman", "Erik Cernak", "Darren Raddysh"]
+LightningDef2 = ["Victor Hedman", "Erik Cernak", "Darren Raddysh"]
 LightningG = ["Andrei Vasilevskiy", "Hugo Alnefelt"]
 
 #Maple_Leafs
