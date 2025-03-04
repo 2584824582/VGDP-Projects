@@ -5,6 +5,7 @@ import NHLTeams
 #Individual Variables
 skip = 1
 #All Fucntions for Player and AI
+
 def rulesAI():
     print("You will play against me in a game of NHL Fantasy!")
     time.sleep(3)
@@ -940,7 +941,7 @@ def skipTeamTwoPlayers15():
 
 def skipTeamTwoPlayers16():
     global skip
-    global randomTeamChoice6
+    global sixthTeamChoiceplayer1
     print("Do you want to skip this team? Y/N")
     skipchoice = input()
     if skipchoice == "Y" or skipchoice == "y" and skip == 1:
@@ -950,8 +951,8 @@ def skipTeamTwoPlayers16():
         print(f"You have {skip} skips left.")
         print("I'll draw a team for you.")
         time.sleep(1)
-        randomTeamChoice6 = random.choice(teams)
-        print(f"The team I picked is: {randomTeamChoice6}.")
+        sixthTeamChoiceplayer1 = random.choice(teams)
+        print(f"The team I picked is: {sixthTeamChoiceplayer1}.")
     elif skipchoice == "N" or skipchoice == "n":
         print("You didn't skip this team.")
         time.sleep(1)
@@ -1078,7 +1079,7 @@ def skipTeamTwoPlayers5Player25():
 
 def skipTeamTwoPlayers6Player26():
     global skip
-    global randomTeamChoice6
+    global sixthTeamChoiceplayer2
     print("Do you want to skip this team? Y/N")
     skipchoice = input()
     if skipchoice == "Y" or skipchoice == "y" and skip == 1:
@@ -1088,8 +1089,8 @@ def skipTeamTwoPlayers6Player26():
         print(f"You have {skip} skips left.")
         print("I'll draw a team for you.")
         time.sleep(1)
-        randomTeamChoice6 = random.choice(teams)
-        print(f"The team I picked is: {randomTeamChoice6}.")
+        sixthTeamChoiceplayer2 = random.choice(teams)
+        print(f"The team I picked is: {sixthTeamChoiceplayer2}.")
     elif skipchoice == "N" or skipchoice == "n":
         print("You didn't skip this team.")
         time.sleep(1)
@@ -1129,9 +1130,9 @@ def ListPositionPlayers5TwoPlayers15():
         print("Which player do you want to pick?")
 
 def ListPositionPlayers6TwoPlayers16():
-    availablePlayers6 = randomTeamChoice6 + your_position6
-    if availablePlayers6 in globals():
-        print(f"Here are the applicable players: {globals()[availablePlayers6]}.")
+    sixthTeamAvailablePlayers1 = sixthTeamChoiceplayer1 + sixthyour_positionplayer1
+    if sixthTeamAvailablePlayers1 in globals():
+        print(f"Here are the applicable players: {globals()[sixthTeamAvailablePlayers1]}.")
         print("Which player do you want to pick?")
 
 def ListPositionPlayersTwoPlayers21():
@@ -1164,9 +1165,9 @@ def ListPositionPlayers5TwoPlayers25():
         print("Which player do you want to pick?")
 
 def ListPositionPlayers6TwoPlayers26():
-    availablePlayers6 = randomTeamChoice6 + your_position6
-    if availablePlayers6 in globals():
-        print(f"Here are the applicable players: {globals()[availablePlayers6]}.")
+    sixthTeamAvailablePlayers2 = sixthTeamChoiceplayer2 + sixthyour_positionplayer2
+    if sixthTeamAvailablePlayers2 in globals():
+        print(f"Here are the applicable players: {globals()[sixthTeamAvailablePlayers2]}.")
         print("Which player do you want to pick?")
 
 def checkpositionUserPlayer11():
@@ -1215,10 +1216,10 @@ def checkpositionUserPlayer15():
         redoPosition5()
 
 def checkpositionUserPlayer16():
-    if your_position6 not in NHLTeams.used_Positions1:
+    if sixthyour_positionplayer1 not in NHLTeams.used_Positions1:
         print(f"This position is available.")
         time.sleep(1)
-    elif your_position6 in NHLTeams.used_Positions1:
+    elif sixthyour_positionplayer1 in NHLTeams.used_Positions1:
         print("Please pick a different position. This position has been used.")
         time.sleep(1)
         redoPosition6()
@@ -1269,10 +1270,10 @@ def checkpositionUserplayer25():
         redoPositionplayer25()
 
 def checkpositionUserplayer26():
-    if your_position6 not in NHLTeams.used_Positions2:
+    if sixthyour_positionplayer2 not in NHLTeams.used_Positions2:
         print(f"This position is available.")
         time.sleep(1)
-    elif your_position6 in NHLTeams.used_Positions2:
+    elif sixthyour_positionplayer2 in NHLTeams.used_Positions2:
         print("Please pick a different position. This position has been used.")
         time.sleep(1)
         redoPositionplayer26()
@@ -1323,10 +1324,10 @@ def checkplayersUserplayer15():
         ListPositionPlayers5TwoPlayers15()
 
 def checkplayersUserplayer16():
-    if player6 not in NHLTeams.used_players:
+    if sixthplayer1 not in NHLTeams.used_players:
         print(f"This player is available.")
         time.sleep(1)
-    elif player6 in NHLTeams.used_players:
+    elif sixthplayer1 in NHLTeams.used_players:
         print("Please pick a different player. This player has been used.")
         time.sleep(1)
         ListPositionPlayers6TwoPlayers16()
@@ -1377,10 +1378,10 @@ def checkplayersUserplayer25():
         ListPositionPlayers5TwoPlayers25()
 
 def checkplayersUserplayer26():
-    if player6 not in NHLTeams.used_players:
+    if sixthplayer2 not in NHLTeams.used_players:
         print(f"This player is available.")
         time.sleep(1)
-    elif player6 in NHLTeams.used_players:
+    elif sixthplayer2 in NHLTeams.used_players:
         print("Please pick a different player. This player has been used.")
         time.sleep(1)
         ListPositionPlayers6TwoPlayers26()
@@ -1829,17 +1830,97 @@ def player2Pick5():
     used_Positions2.append(fifthyour_positionplayer2)
     positionsUser2.remove(fifthyour_positionplayer2)
     time.sleep(1)
-    player1Pick5()
+    player1Pick6()
     time.sleep(1)
 
+def player1Pick6():
+    global sixthTeamChoiceplayer1
+    global sixthyour_positionplayer1
+    global sixthplayer1
+    global sixthTeamAvailablePlayers1
+    print("Round 6")
+    time.sleep(1)
+    print("I'll draw a team for you.")
+    time.sleep(1)
+    sixthTeamChoiceplayer1 = random.choice(teams)
+    print(f"The team I picked is: {sixthTeamChoiceplayer1}.")
+    time.sleep(1)
+    skipTeamTwoPlayers16()
+    time.sleep(1)
+    print("You pick a position.")
+    time.sleep(1)
+    print("Which position do you want to pick: (C, RW, LW, Def1, Def2, G) ")
+    sixthyour_positionplayer1 = input()
+    time.sleep(1)
+    checkpositionUserPlayer16()
+    print(f"You picked: {sixthyour_positionplayer1}.")
+    time.sleep(1)
+    sixthTeamAvailablePlayers1 = firstTeamChoiceplayer2 + sixthyour_positionplayer1
+    ListPositionPlayers6TwoPlayers16()
+    print("Which player do you want to pick?")
+    time.sleep(1)
+    sixthplayer1 = input()
+    checkplayersUserplayer16()
+    time.sleep(1)
+    print(f"You picked {sixthplayer1} as your {sixthyour_positionplayer1}.")
+    time.sleep(1)
+    used_players.append(sixthplayer1)
+    used_Positions1.append(sixthyour_positionplayer1)
+    positionsUser1.remove(sixthyour_positionplayer1)
+    print("Here is your Final Team: ")
+    TeamlisterPlayer1()
+    time.sleep(1)
+    player2Pick6()
+    time.sleep(1)
 
+def player2Pick6():
+    global sixthTeamChoiceplayer2
+    global sixthyour_positionplayer2
+    global sixthplayer2
+    global sixthTeamAvailablePlayers2
+    time.sleep(1)
+    print("I'll draw a team for you.")
+    time.sleep(1)
+    sixthTeamChoiceplayer2 = random.choice(teams)
+    print(f"The team I picked is: {sixthTeamChoiceplayer2}.")
+    time.sleep(1)
+    skipTeamTwoPlayers6Player26()
+    time.sleep(1)
+    print("You pick a position.")
+    time.sleep(1)
+    print("Which position do you want to pick: (C, RW, LW, Def1, Def2, G) ")
+    sixthyour_positionplayer2 = input()
+    time.sleep(1)
+    checkpositionUserplayer26()
+    print(f"You picked: {sixthyour_positionplayer2}.")
+    time.sleep(1)
+    sixthTeamAvailablePlayers2 = fourthTeamChoiceplayer2 + sixthyour_positionplayer2
+    ListPositionPlayers6TwoPlayers26()
+    print("Which player do you want to pick?")
+    time.sleep(1)
+    sixthplayer2 = input()
+    checkplayersUserplayer26()
+    time.sleep(1)
+    print(f"You picked {sixthplayer2} as your {sixthyour_positionplayer2}.")
+    time.sleep(1)
+    used_players.append(sixthplayer2)
+    used_Positions2.append(sixthyour_positionplayer2)
+    positionsUser2.remove(sixthyour_positionplayer2)
+    print("Here is your Final Team: ")
+    TeamlisterPlayer2()
+    time.sleep(1)
+    player1Pick6()
+    time.sleep(1)
 
+def TeamlisterPlayer1():
+    global PlayerTeam1
+    PlayerTeam1 = firstplayer1 + " as your " + firstyour_positionplayer1, secondplayer1 + " as your " + secondyour_positionplayer1,thirdplayer1 + " as your " + thirdyour_positionplayer1,fourthplayer1 + " as your " + fourthyour_positionplayer1,fifthplayer1 + " as your " + fifthyour_positionplayer1,sixthplayer1 + " as your " + sixthyour_positionplayer1
+    print(PlayerTeam1)
 
-
-
-
-
-
+def TeamlisterPlayer2():
+    global PlayerTeam2
+    PlayerTeam2 =  firstplayer2 + " as your " + firstyour_positionplayer2, secondplayer2 + " as your " + secondyour_positionplayer2,thirdplayer2 + " as your " + thirdyour_positionplayer2,fourthplayer2 + " as your " + fourthyour_positionplayer2,fifthplayer2 + " as your " + fifthyour_positionplayer2,sixthplayer2 + " as your " + sixthyour_positionplayer2
+    print(PlayerTeam2)
 #Start of game
 print("Welcome to Fantasy!")
 time.sleep(1)
@@ -1856,14 +1937,12 @@ if users == "1":
     print("Great! Let's pick some teams!")
     time.sleep(1)
     playerPick1()
-'''
 elif users == "2":
     print("Do you know the rules? Y/N")
-if input() == "N" or input() == "n":
-    time.sleep(1)
-    rulesUSERONLY()
-elif input() == "Y" or input() == "y":
-    print("Great! Lets play!")
-    time.sleep(1)
-    player1Pick1()
-'''
+    if input() == "N" or input() == "n":
+        time.sleep(1)
+        rulesUsersONLY()
+    elif input() == "Y" or input() == "y":
+        print("Great! Lets play!")
+        time.sleep(1)
+        player1Pick1()
