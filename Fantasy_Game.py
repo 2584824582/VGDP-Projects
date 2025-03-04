@@ -29,20 +29,20 @@ def skipTeam():
     if skipchoice == "Y" or skipchoice == "y" and skip == 1:
         skip = 0
         print("You skipped this team.")
-        time.sleep(2)
+        time.sleep(1)
         print(f"You have {skip} skips left.")
         print("I'll draw a team for you.")
-        time.sleep(2)
+        time.sleep(1)
         randomTeamChoice = random.choice(teams)
         print(f"The team I picked is: {randomTeamChoice}.")
     elif skipchoice == "N" or skipchoice == "n":
         print("You didn't skip this team.")
-        time.sleep(2)
+        time.sleep(1)
         print(f"You have {skip} skips left.") 
-        time.sleep(2)
+        time.sleep(1)
     if skip == 0 and skipchoice == "Y" or skipchoice == "y":
         print("You have no more skips left.")
-        time.sleep(2)
+        time.sleep(1)
 
 def skipTeam2():
     global skip
@@ -52,20 +52,20 @@ def skipTeam2():
     if skipchoice == "Y" or skipchoice == "y" and skip == 1:
         skip = 0
         print("You skipped this team.")
-        time.sleep(2)
+        time.sleep(1)
         print(f"You have {skip} skips left.")
         print("I'll draw a team for you.")
-        time.sleep(2)
+        time.sleep(1)
         randomTeamChoice2 = random.choice(teams)
         print(f"The team I picked is: {randomTeamChoice2}.")
     elif skipchoice == "N" or skipchoice == "n":
         print("You didn't skip this team.")
-        time.sleep(2)
+        time.sleep(1)
         print(f"You have {skip} skips left.") 
-        time.sleep(2)
+        time.sleep(1)
     if skip == 0 and skipchoice == "Y" or skipchoice == "y":
         print("You have no more skips left.")
-        time.sleep(2)
+        time.sleep(1)
 
 def skipTeam3():
     global skip
@@ -75,20 +75,20 @@ def skipTeam3():
     if skipchoice == "Y" or skipchoice == "y" and skip == 1:
         skip = 0
         print("You skipped this team.")
-        time.sleep(2)
+        time.sleep(1)
         print(f"You have {skip} skips left.")
         print("I'll draw a team for you.")
-        time.sleep(2)
+        time.sleep(1)
         randomTeamChoice3 = random.choice(teams)
         print(f"The team I picked is: {randomTeamChoice3}.")
     elif skipchoice == "N" or skipchoice == "n":
         print("You didn't skip this team.")
-        time.sleep(2)
+        time.sleep(1)
         print(f"You have {skip} skips left.") 
-        time.sleep(2)
+        time.sleep(1)
     if skip == 0 and skipchoice == "Y" or skipchoice == "y":
         print("You have no more skips left.")
-        time.sleep(2)  
+        time.sleep(1)  
 
 def skipTeam4():
     global skip
@@ -98,20 +98,20 @@ def skipTeam4():
     if skipchoice == "Y" or skipchoice == "y" and skip == 1:
         skip = 0
         print("You skipped this team.")
-        time.sleep(2)
+        time.sleep(1)
         print(f"You have {skip} skips left.")
         print("I'll draw a team for you.")
-        time.sleep(2)
+        time.sleep(1)
         randomTeamChoice4 = random.choice(teams)
         print(f"The team I picked is: {randomTeamChoice4}.")
     elif skipchoice == "N" or skipchoice == "n":
         print("You didn't skip this team.")
-        time.sleep(2)
+        time.sleep(1)
         print(f"You have {skip} skips left.") 
-        time.sleep(2)
+        time.sleep(1)
     if skip == 0 and skipchoice == "Y" or skipchoice == "y":
         print("You have no more skips left.")
-        time.sleep(2)
+        time.sleep(1)
 
 def skipTeam5():
     global skip
@@ -121,20 +121,20 @@ def skipTeam5():
     if skipchoice == "Y" or skipchoice == "y" and skip == 1:
         skip = 0
         print("You skipped this team.")
-        time.sleep(2)
+        time.sleep(1)
         print(f"You have {skip} skips left.")
         print("I'll draw a team for you.")
-        time.sleep(2)
+        time.sleep(1)
         randomTeamChoice5 = random.choice(teams)
         print(f"The team I picked is: {randomTeamChoice5}.")
     elif skipchoice == "N" or skipchoice == "n":
         print("You didn't skip this team.")
-        time.sleep(2)
+        time.sleep(1)
         print(f"You have {skip} skips left.") 
-        time.sleep(2)
+        time.sleep(1)
     if skip == 0 and skipchoice == "Y" or skipchoice == "y":
         print("You have no more skips left.")
-        time.sleep(2)
+        time.sleep(1)
 
 def skipTeam6():
     global skip
@@ -144,73 +144,73 @@ def skipTeam6():
     if skipchoice == "Y" or skipchoice == "y" and skip == 1:
         skip = 0
         print("You skipped this team.")
-        time.sleep(2)
+        time.sleep(1)
         print(f"You have {skip} skips left.")
         print("I'll draw a team for you.")
-        time.sleep(2)
+        time.sleep(1)
         randomTeamChoice6 = random.choice(teams)
         print(f"The team I picked is: {randomTeamChoice6}.")
     elif skipchoice == "N" or skipchoice == "n":
         print("You didn't skip this team.")
-        time.sleep(2)
+        time.sleep(1)
         print(f"You have {skip} skips left.") 
-        time.sleep(2)
+        time.sleep(1)
     if skip == 0 and skipchoice == "Y" or skipchoice == "y":
         print("You have no more skips left.")
-        time.sleep(2)
+        time.sleep(1)
 
 def checkpositionUser():
     if your_position not in NHLTeams.used_Positions1:
         print(f"This position is available.")
-        time.sleep(2)
+        time.sleep(1)
     elif your_position in NHLTeams.used_Positions1:
         print("Please pick a different position. This position has been used.")
-        time.sleep(2)
+        time.sleep(1)
         redoPosition1()
 
 def checkpositionUser2():
     if your_position2 not in NHLTeams.used_Positions1:
         print(f"This position is available.")
-        time.sleep(2)
+        time.sleep(1)
     elif your_position2 in NHLTeams.used_Positions1:
         print("Please pick a different position. This position has been used.")
-        time.sleep(2)
+        time.sleep(1)
         redoPosition2()
 
 def checkpositionUser3():
     if your_position3 not in NHLTeams.used_Positions1:
         print(f"This position is available.")
-        time.sleep(2)
+        time.sleep(1)
     elif your_position3 in NHLTeams.used_Positions1:
         print("Please pick a different position. This position has been used.")
-        time.sleep(2)
+        time.sleep(1)
         redoPosition3()
 
 def checkpositionUser4():
     if your_position4 not in NHLTeams.used_Positions1:
         print(f"This position is available.")
-        time.sleep(2)
+        time.sleep(1)
     elif your_position4 in NHLTeams.used_Positions1:
         print("Please pick a different position. This position has been used.")
-        time.sleep(2)
+        time.sleep(1)
         redoPosition4()
 
 def checkpositionUser5():
     if your_position5 not in NHLTeams.used_Positions1:
         print(f"This position is available.")
-        time.sleep(2)
+        time.sleep(1)
     elif your_position5 in NHLTeams.used_Positions1:
         print("Please pick a different position. This position has been used.")
-        time.sleep(2)
+        time.sleep(1)
         redoPosition5()
 
 def checkpositionUser6():
     if your_position6 not in NHLTeams.used_Positions1:
         print(f"This position is available.")
-        time.sleep(2)
+        time.sleep(1)
     elif your_position6 in NHLTeams.used_Positions1:
         print("Please pick a different position. This position has been used.")
-        time.sleep(2)
+        time.sleep(1)
         redoPosition6()
 
 def redoPosition1():
@@ -287,55 +287,55 @@ def ListPositionPlayers6():
 def checkplayersUser():
     if player not in NHLTeams.used_players:
         print(f"This player is available.")
-        time.sleep(2)
+        time.sleep(1)
     elif player in NHLTeams.used_players:
         print("Please pick a different player. This player has been used.")
-        time.sleep(2)
+        time.sleep(1)
         ListPositionPlayers()
 
 def checkplayersUser2():
     if player2 not in NHLTeams.used_players:
         print(f"This player is available.")
-        time.sleep(2)
+        time.sleep(1)
     elif player2 in NHLTeams.used_players:
         print("Please pick a different player. This player has been used.")
-        time.sleep(2)
+        time.sleep(1)
         ListPositionPlayers2()
 
 def checkplayersUser3():
     if player3 not in NHLTeams.used_players:
         print(f"This player is available.")
-        time.sleep(2)
+        time.sleep(1)
     elif player3 in NHLTeams.used_players:
         print("Please pick a different player. This player has been used.")
-        time.sleep(2)
+        time.sleep(1)
         ListPositionPlayers3()
 
 def checkplayersUser4():
     if player4 not in NHLTeams.used_players:
         print(f"This player is available.")
-        time.sleep(2)
+        time.sleep(1)
     elif player4 in NHLTeams.used_players:
         print("Please pick a different player. This player has been used.")
-        time.sleep(2)
+        time.sleep(1)
         ListPositionPlayers4()
 
 def checkplayersUser5():
     if player5 not in NHLTeams.used_players:
         print(f"This player is available.")
-        time.sleep(2)
+        time.sleep(1)
     elif player5 in NHLTeams.used_players:
         print("Please pick a different player. This player has been used.")
-        time.sleep(2)
+        time.sleep(1)
         ListPositionPlayers5()
 
 def checkplayersUser6():
     if player6 not in NHLTeams.used_players:
         print(f"This player is available.")
-        time.sleep(2)
+        time.sleep(1)
     elif player6 in NHLTeams.used_players:
         print("Please pick a different player. This player has been used.")
-        time.sleep(2)
+        time.sleep(1)
         ListPositionPlayers6()
 
 def checkPositionAI():
@@ -343,7 +343,7 @@ def checkPositionAI():
     randomPosition = random.choice(positionsAI)
     if randomPosition in NHLTeams.used_Positions2:
         print("I picked a position that has already been used. Let me pick again.")
-        time.sleep(2)
+        time.sleep(1)
         checkPositionAI()
 
 def checkPositionAI2():
@@ -351,7 +351,7 @@ def checkPositionAI2():
     randomPosition2 = random.choice(positionsAI)
     if randomPosition2 in NHLTeams.used_Positions2:
         print("I picked a position that has already been used. Let me pick again.")
-        time.sleep(2)
+        time.sleep(1)
         checkPositionAI2()
 
 def checkPositionAI3():
@@ -359,7 +359,7 @@ def checkPositionAI3():
     randomPosition3 = random.choice(positionsAI)
     if randomPosition3 in NHLTeams.used_Positions2:
         print("I picked a position that has already been used. Let me pick again.")
-        time.sleep(2)
+        time.sleep(1)
         checkPositionAI3()
 
 def checkPositionAI4():
@@ -367,7 +367,7 @@ def checkPositionAI4():
     randomPosition4 = random.choice(positionsAI)
     if randomPosition4 in NHLTeams.used_Positions2:
         print("I picked a position that has already been used. Let me pick again.")
-        time.sleep(2)
+        time.sleep(1)
         checkPositionAI4()
         
 def checkPositionAI5():
@@ -375,7 +375,7 @@ def checkPositionAI5():
     randomPosition5 = random.choice(positionsAI)
     if randomPosition5 in NHLTeams.used_Positions2:
         print("I picked a position that has already been used. Let me pick again.")
-        time.sleep(2)
+        time.sleep(1)
         checkPositionAI5()
         
 def checkPositionAI6():
@@ -383,7 +383,7 @@ def checkPositionAI6():
     randomPosition6 = random.choice(positionsAI)
     if randomPosition6 in NHLTeams.used_Positions2:
         print("I picked a position that has already been used. Let me pick again.")
-        time.sleep(2)
+        time.sleep(1)
         checkPositionAI6()
 
 def checkplayersAI():
@@ -392,7 +392,7 @@ def checkplayersAI():
     if availablePlayers in globals():
         print(f"Here are the applicable players: {globals()[availablePlayers]}.")
         AiPlayer1 = random.choice(globals()[availablePlayers])
-        time.sleep(2)
+        time.sleep(1)
 
 def checkplayersAI2():
     global AiPlayer2
@@ -400,7 +400,7 @@ def checkplayersAI2():
     if availablePlayers in globals():
         print(f"Here are the applicable players: {globals()[availablePlayers]}.")
         AiPlayer2 = random.choice(globals()[availablePlayers])
-        time.sleep(2)
+        time.sleep(1)
 
 def checkplayersAI3():
     global AiPlayer3
@@ -408,7 +408,7 @@ def checkplayersAI3():
     if availablePlayers in globals():
         print(f"Here are the applicable players: {globals()[availablePlayers]}.")
         AiPlayer3 = random.choice(globals()[availablePlayers])
-        time.sleep(2)
+        time.sleep(1)
 
 def checkplayersAI4():
     global AiPlayer4
@@ -416,7 +416,7 @@ def checkplayersAI4():
     if availablePlayers in globals():
         print(f"Here are the applicable players: {globals()[availablePlayers]}.")
         AiPlayer4 = random.choice(globals()[availablePlayers])
-        time.sleep(2)
+        time.sleep(1)
 
 def checkplayersAI5():
     global AiPlayer5
@@ -424,7 +424,7 @@ def checkplayersAI5():
     if availablePlayers in globals():
         print(f"Here are the applicable players: {globals()[availablePlayers]}.")
         AiPlayer5 = random.choice(globals()[availablePlayers])
-        time.sleep(2)
+        time.sleep(1)
 
 def checkplayersAI6():
     global AiPlayer6
@@ -432,7 +432,7 @@ def checkplayersAI6():
     if availablePlayers in globals():
         print(f"Here are the applicable players: {globals()[availablePlayers]}.")
         AiPlayer6 = random.choice(globals()[availablePlayers])
-        time.sleep(2)
+        time.sleep(1)
 
 def playerPick1():
     global randomTeamChoice
@@ -440,60 +440,60 @@ def playerPick1():
     global player
     global availablePlayers
     print("Round 1")
-    time.sleep(2)
+    time.sleep(1)
     print("I'll draw a team for you.")
-    time.sleep(2)
+    time.sleep(1)
     randomTeamChoice = random.choice(teams)
     print(f"The team I picked is: {randomTeamChoice}.")
-    time.sleep(2)
+    time.sleep(1)
     skipTeam()
-    time.sleep(2)
+    time.sleep(1)
     print("You pick a position.")
-    time.sleep(2)
+    time.sleep(1)
     print("Which position do you want to pick: (C, RW, LW, Def1, Def2, G) ")
     your_position = input()
-    time.sleep(2)
+    time.sleep(1)
     checkpositionUser()
     print(f"You picked: {your_position}.")
-    time.sleep(2)
+    time.sleep(1)
     availablePlayers = randomTeamChoice + your_position
     ListPositionPlayers()
     print("Which player do you want to pick?")
-    time.sleep(2)
+    time.sleep(1)
     player = input()
     checkplayersUser()
-    time.sleep(2)
+    time.sleep(1)
     print(f"You picked {player} as your {your_position}.")
-    time.sleep(2)
+    time.sleep(1)
     used_players.append(player)
     used_Positions1.append(your_position)
     positionsUser.remove(your_position)
-    time.sleep(2)
+    time.sleep(1)
     AIPick1()
-    time.sleep(2)
+    time.sleep(1)
 
 def AIPick1():
     global randomPosition
     global randomTeamChoiceAI
     global AiPlayer1
     print("I'll draw a team for me.")
-    time.sleep(2)
+    time.sleep(1)
     randomTeamChoiceAI = random.choice(teams)
     print(f"The team I picked is: {randomTeamChoiceAI}.")
-    time.sleep(2)
+    time.sleep(1)
     print("I will now pick a position.")
     checkPositionAI()
-    time.sleep(2)
+    time.sleep(1)
     print(f"I picked: {randomPosition}.")
-    time.sleep(2)
+    time.sleep(1)
     checkplayersAI()
-    time.sleep(2)
+    time.sleep(1)
     print(f"I picked {AiPlayer1} as my {randomPosition}.")
-    time.sleep(2)
+    time.sleep(1)
     used_players.append(AiPlayer1)
     used_Positions2.append(randomPosition)
     positionsAI.remove(randomPosition)
-    time.sleep(2)
+    time.sleep(1)
     playerPick2()
 
 def playerPick2():
@@ -502,54 +502,54 @@ def playerPick2():
     global player2
     global randomTeamChoice2
     print("Round 2")
-    time.sleep(2)
+    time.sleep(1)
     print("I'll draw a team for you.")
-    time.sleep(2)
+    time.sleep(1)
     randomTeamChoice2 = random.choice(teams)
     print(f"The team I picked is: {randomTeamChoice2}.")
-    time.sleep(2)
+    time.sleep(1)
     skipTeam2()
     print("You pick a position.")
-    time.sleep(2)
+    time.sleep(1)
     print("Which position do you want to pick: (C, RW, LW, Def1, Def2, G) ")
     your_position2 = input()
     checkpositionUser2()
     print(f"You picked: {your_position2}.")
     availablePlayers2 = randomTeamChoice2 + your_position2
     ListPositionPlayers2()
-    time.sleep(2)
+    time.sleep(1)
     player2 = input()
     checkplayersUser2()
-    time.sleep(2)
+    time.sleep(1)
     print(f"You picked {player2} as your {your_position2}.")
-    time.sleep(2)
+    time.sleep(1)
     used_players.append(player2)
     used_Positions1.append(your_position2)
     positionsUser.remove(your_position2)
-    time.sleep(2)
+    time.sleep(1)
     AIpick2()
 
 def AIpick2():
     global randomPosition2
     global randomTeamChoiceAI
     print("I'll draw a team for me.")
-    time.sleep(2)
+    time.sleep(1)
     randomTeamChoiceAI = random.choice(teams)
     print(f"The team I picked is: {randomTeamChoiceAI}.")
-    time.sleep(2)
+    time.sleep(1)
     print("I will now pick a position.")
     checkPositionAI2()
-    time.sleep(2)
+    time.sleep(1)
     print(f"I picked: {randomPosition2}.")
-    time.sleep(2)
+    time.sleep(1)
     checkplayersAI2()
-    time.sleep(2)
+    time.sleep(1)
     print(f"I picked {AiPlayer2} as my {randomPosition2}.")
-    time.sleep(2)
+    time.sleep(1)
     used_players.append(AiPlayer2)
     used_Positions2.append(randomPosition2)
     positionsAI.remove(randomPosition2)
-    time.sleep(2)
+    time.sleep(1)
     playerPick3()
 
 def playerPick3():
@@ -558,54 +558,54 @@ def playerPick3():
     global player3
     global randomTeamChoice3
     print("Round 3")
-    time.sleep(2)
+    time.sleep(1)
     print("I'll draw a team for you.")
-    time.sleep(2)
+    time.sleep(1)
     randomTeamChoice3 = random.choice(teams)
     print(f"The team I picked is: {randomTeamChoice3}.")
-    time.sleep(2)
+    time.sleep(1)
     skipTeam3()
     print("You pick a position.")
-    time.sleep(2)
+    time.sleep(1)
     print("Which position do you want to pick: (C, RW, LW, Def1, Def2, G) ")
     your_position3 = input()
     checkpositionUser3()
     print(f"You picked: {your_position3}.")
     availablePlayers3 = randomTeamChoice3 + your_position3
     ListPositionPlayers3()
-    time.sleep(2)
+    time.sleep(1)
     player3 = input()
     checkplayersUser3()
-    time.sleep(2)
+    time.sleep(1)
     print(f"You picked {player3} as your {your_position3}.")
-    time.sleep(2)
+    time.sleep(1)
     used_players.append(player3)
     used_Positions1.append(your_position3)
     positionsUser.remove(your_position3)
-    time.sleep(2)
+    time.sleep(1)
     AIpick3()
 
 def AIpick3():
     global randomPosition3
     global randomTeamChoiceAI
     print("I'll draw a team for me.")
-    time.sleep(2)
+    time.sleep(1)
     randomTeamChoiceAI = random.choice(teams)
     print(f"The team I picked is: {randomTeamChoiceAI}.")
-    time.sleep(2)
+    time.sleep(1)
     print("I will now pick a position.")
     checkPositionAI3()
-    time.sleep(2)
+    time.sleep(1)
     print(f"I picked: {randomPosition3}.")
-    time.sleep(2)
+    time.sleep(1)
     checkplayersAI3()
-    time.sleep(2)
+    time.sleep(1)
     print(f"I picked {AiPlayer3} as my {randomPosition3}.")
-    time.sleep(2)
+    time.sleep(1)
     used_players.append(AiPlayer3)
     used_Positions2.append(randomPosition3)
     positionsAI.remove(randomPosition3)
-    time.sleep(2)
+    time.sleep(1)
     playerPick4()
 
 def playerPick4():
@@ -614,54 +614,54 @@ def playerPick4():
     global player4
     global randomTeamChoice4
     print("Round 4")
-    time.sleep(2)
+    time.sleep(1)
     print("I'll draw a team for you.")
-    time.sleep(2)
+    time.sleep(1)
     randomTeamChoice4 = random.choice(teams)
     print(f"The team I picked is: {randomTeamChoice4}.")
-    time.sleep(2)
+    time.sleep(1)
     skipTeam4()
     print("You pick a position.")
-    time.sleep(2)
+    time.sleep(1)
     print("Which position do you want to pick: (C, RW, LW, Def1, Def2, G) ")
     your_position4 = input()
     checkpositionUser4()
     print(f"You picked: {your_position4}.")
     availablePlayers4 = randomTeamChoice4 + your_position4
     ListPositionPlayers4()
-    time.sleep(2)
+    time.sleep(1)
     player4 = input()
     checkplayersUser4()
-    time.sleep(2)
+    time.sleep(1)
     print(f"You picked {player4} as your {your_position4}.")
-    time.sleep(2)
+    time.sleep(1)
     used_players.append(player4)
     used_Positions1.append(your_position4)
     positionsUser.remove(your_position4)
-    time.sleep(2)
+    time.sleep(1)
     AIpick4()
 
 def AIpick4():
     global randomPosition4
     global randomTeamChoiceAI
     print("I'll draw a team for me.")
-    time.sleep(2)
+    time.sleep(1)
     randomTeamChoiceAI = random.choice(teams)
     print(f"The team I picked is: {randomTeamChoiceAI}.")
-    time.sleep(2)
+    time.sleep(1)
     print("I will now pick a position.")
     checkPositionAI4()
-    time.sleep(2)
+    time.sleep(1)
     print(f"I picked: {randomPosition4}.")
-    time.sleep(2)
+    time.sleep(1)
     checkplayersAI4()
-    time.sleep(2)
+    time.sleep(1)
     print(f"I picked {AiPlayer4} as my {randomPosition4}.")
-    time.sleep(2)
+    time.sleep(1)
     used_players.append(AiPlayer4)
     used_Positions2.append(randomPosition4)
     positionsAI.remove(randomPosition4)
-    time.sleep(2)
+    time.sleep(1)
     playerPick5()
 
 def playerPick5():
@@ -670,54 +670,54 @@ def playerPick5():
     global player5
     global randomTeamChoice5
     print("Round 5")
-    time.sleep(2)
+    time.sleep(1)
     print("I'll draw a team for you.")
-    time.sleep(2)
+    time.sleep(1)
     randomTeamChoice5 = random.choice(teams)
     print(f"The team I picked is: {randomTeamChoice5}.")
-    time.sleep(2)
+    time.sleep(1)
     skipTeam5()
     print("You pick a position.")
-    time.sleep(2)
+    time.sleep(1)
     print("Which position do you want to pick: (C, RW, LW, Def1, Def2, G) ")
     your_position5 = input()
     checkpositionUser5()
     print(f"You picked: {your_position5}.")
     availablePlayers5 = randomTeamChoice5 + your_position5
     ListPositionPlayers5()
-    time.sleep(2)
+    time.sleep(1)
     player5 = input()
     checkplayersUser5()
-    time.sleep(2)
+    time.sleep(1)
     print(f"You picked {player5} as your {your_position5}.")
-    time.sleep(2)
+    time.sleep(1)
     used_players.append(player5)
     used_Positions1.append(your_position5)
     positionsUser.remove(your_position5)
-    time.sleep(2)
+    time.sleep(1)
     AIpick5()
 
 def AIpick5():
     global randomPosition5
     global randomTeamChoiceAI
     print("I'll draw a team for me.")
-    time.sleep(2)
+    time.sleep(1)
     randomTeamChoiceAI = random.choice(teams)
     print(f"The team I picked is: {randomTeamChoiceAI}.")
-    time.sleep(2)
+    time.sleep(1)
     print("I will now pick a position.")
     checkPositionAI5()
-    time.sleep(2)
+    time.sleep(1)
     print(f"I picked: {randomPosition5}.")
-    time.sleep(2)
+    time.sleep(1)
     checkplayersAI5()
-    time.sleep(2)
+    time.sleep(1)
     print(f"I picked {AiPlayer5} as my {randomPosition5}.")
-    time.sleep(2)
+    time.sleep(1)
     used_players.append(AiPlayer5)
     used_Positions2.append(randomPosition5)
     positionsAI.remove(randomPosition5)
-    time.sleep(2)
+    time.sleep(1)
     playerPick6()
 
 def playerPick6():
@@ -726,31 +726,31 @@ def playerPick6():
     global player6
     global randomTeamChoice6
     print("Round 6")
-    time.sleep(2)
+    time.sleep(1)
     print("I'll draw a team for you.")
-    time.sleep(2)
+    time.sleep(1)
     randomTeamChoice6 = random.choice(teams)
     print(f"The team I picked is: {randomTeamChoice6}.")
-    time.sleep(2)
+    time.sleep(1)
     skipTeam6()
     print("You pick a position.")
-    time.sleep(2)
+    time.sleep(1)
     print("Which position do you want to pick: (C, RW, LW, Def1, Def2, G) ")
     your_position6 = input()
     checkpositionUser6()
     print(f"You picked: {your_position6}.")
     availablePlayers6 = randomTeamChoice6 + your_position6
     ListPositionPlayers6()
-    time.sleep(2)
+    time.sleep(1)
     player6 = input()
     checkplayersUser6()
-    time.sleep(2)
+    time.sleep(1)
     print(f"You picked {player6} as your {your_position6}.")
-    time.sleep(2)
+    time.sleep(1)
     used_players.append(player6)
     used_Positions1.append(your_position6)
     positionsUser.remove(your_position6)
-    time.sleep(2)
+    time.sleep(1)
     print("Here is your Final Team: ")
     Teamlister1()
     AIpick6()
@@ -759,26 +759,26 @@ def AIpick6():
     global randomPosition6
     global randomTeamChoiceAI
     print("I'll draw a team for me.")
-    time.sleep(2)
+    time.sleep(1)
     randomTeamChoiceAI = random.choice(teams)
     print(f"The team I picked is: {randomTeamChoiceAI}.")
-    time.sleep(2)
+    time.sleep(1)
     print("I will now pick a position.")
     checkPositionAI6()
-    time.sleep(2)
+    time.sleep(1)
     print(f"I picked: {randomPosition6}.")
-    time.sleep(2)
+    time.sleep(1)
     checkplayersAI6()
-    time.sleep(2)
+    time.sleep(1)
     print(f"I picked {AiPlayer6} as my {randomPosition6}.")
-    time.sleep(2)
+    time.sleep(1)
     used_players.append(AiPlayer6)
     used_Positions2.append(randomPosition6)
     positionsAI.remove(randomPosition6)
-    time.sleep(2)
+    time.sleep(1)
     print("Here is my Final Team: ")
     Teamlister2()
-    time.sleep(2)
+    time.sleep(1)
     print("Put these teams into chatGPT.com and let it pick a winner!")
     Winner()
 
@@ -796,10 +796,10 @@ def Winner():
     print("Who won the game? Team1 or Team2?")
     winner = input()
     if winner == "Team1":
-        time.sleep(2)
+        time.sleep(1)
         print("Congratulations! You won the game!")
     elif winner == "Team2":
-        time.sleep(2)
+        time.sleep(1)
         print("I won the game! Better luck next time!")
 #Start of game
 print("Welcome to Fantasy!")
