@@ -1,3 +1,4 @@
+
 teams = [
     "Ducks", "Bruins", "Sabres", 
     "Flames", "Hurricanes", "Blackhawks", "Avalanche", 
