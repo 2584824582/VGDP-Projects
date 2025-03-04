@@ -7,7 +7,8 @@ teams = [
     "Senators", "Flyers", "Penguins", "Sharks", 
     "Kraken", "Blues", "Lightning", "Maple_Leafs", "Hockey_Club", 
     "Canucks", "Golden_Knights", "Capitals", "Jets"]
-positions = ["C", "RW", "LW", "Def1", "Def2", "G"]
+positionsAI = ["C", "RW", "LW", "Def1", "Def2", "G"]
+positionsUser = ["C", "RW", "LW", "Def1", "Def2", "G"]
 used_players = []
 used_Positions1 = []
 used_Positions2 = []
