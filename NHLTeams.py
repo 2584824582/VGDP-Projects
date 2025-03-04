@@ -127,8 +127,8 @@ WildG = ["Marc-Andre Fleury", "Filip Gustavsson", "Jesper Wallstedt"]
 CanadiensC = ["Nick Suzuki", "Kirby Dach", "Alex Newhook", "Christian Dvorak", "Jake Evans", "Owen Beck"]
 CanadiensLW = ["Josh Anderson", "Cole Caufield", "Mike Hoffman", "Rafael Harvey-Pinard", "Juraj Slafkovsky"]
 CanadiensRW = ["Joel Armia", "Brendan Gallagher", "Jonathan Drouin", "Evgenii Dadonov"]
-CanadiensDef1 = ["Kaiden Guhle", "Jordan Harris", "David Savard", "Arber Xhekaj", "Lane Hutson", "Alexandre Carrier" "Mike Matheson", "Justin Barron", "Johnathan Kovacevic"]
-CanadiensDef2 = ["Kaiden Guhle", "Jordan Harris", "David Savard", "Arber Xhekaj", "Lane Hutson", "Alexandre Carrier" "Mike Matheson", "Justin Barron", "Johnathan Kovacevic"]
+CanadiensDef1 = ["Kaiden Guhle", "Jordan Harris", "David Savard", "Arber Xhekaj", "Lane Hutson", "Alexandre Carrier", "Mike Matheson", "Justin Barron", "Johnathan Kovacevic"]
+CanadiensDef2 = ["Kaiden Guhle", "Jordan Harris", "David Savard", "Arber Xhekaj", "Lane Hutson", "Alexandre Carrier", "Mike Matheson", "Justin Barron", "Johnathan Kovacevic"]
 CanadiensG = ["Samuel Montembeault", "Jake Allen", "Jakub Dobes"]
 
 #Predators
@@ -239,8 +239,8 @@ Hockey_ClubG = ["Karel Vejmelka", "Connor Ingram"]
 CanucksC = ["Elias Pettersson", "Filip Chytil", "Pius Suter", "Nils Aman", "Teddy Blueger", "Drew O'Connor"]
 CanucksLW = ["Ilya Mikheyev", "Conor Garland", "Kiefer Sherwood"]
 CanucksRW = ["Brock Boeser", "Anthony Beauvillier", "Dakota Joshua"]
-CanucksDef1 = ["Quinn Hughes", "Filip Hronek", "Marcus Pettersson", "Victor Mancini", "Tyler Myers", "Filip Hronek"]
-CanucksDef2 = ["Quinn Hughes", "Filip Hronek", "Marcus Pettersson", "Victor Mancini", "Tyler Myers", "Filip Hronek"]
+CanucksDef1 = ["Quinn Hughes", "Filip Hronek", "Marcus Pettersson", "Victor Mancini", "Tyler Myers"]
+CanucksDef2 = ["Quinn Hughes", "Filip Hronek", "Marcus Pettersson", "Victor Mancini", "Tyler Myers"]
 CanucksG = ["Thatcher Demko", "Arturs Silovs"]
 
 #Golden_Knights
