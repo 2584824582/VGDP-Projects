@@ -340,7 +340,7 @@ def checkplayersUser6():
 
 def checkPositionAI():
     global randomPosition
-    randomPosition = random.choice(positions)
+    randomPosition = random.choice(positionsAI)
     if randomPosition in NHLTeams.used_Positions2:
         print("I picked a position that has already been used. Let me pick again.")
         time.sleep(2)
@@ -348,7 +348,7 @@ def checkPositionAI():
 
 def checkPositionAI2():
     global randomPosition2
-    randomPosition2 = random.choice(positions)
+    randomPosition2 = random.choice(positionsAI)
     if randomPosition2 in NHLTeams.used_Positions2:
         print("I picked a position that has already been used. Let me pick again.")
         time.sleep(2)
@@ -356,7 +356,7 @@ def checkPositionAI2():
 
 def checkPositionAI3():
     global randomPosition3
-    randomPosition3 = random.choice(positions)
+    randomPosition3 = random.choice(positionsAI)
     if randomPosition3 in NHLTeams.used_Positions2:
         print("I picked a position that has already been used. Let me pick again.")
         time.sleep(2)
@@ -364,7 +364,7 @@ def checkPositionAI3():
 
 def checkPositionAI4():
     global randomPosition4
-    randomPosition4 = random.choice(positions)
+    randomPosition4 = random.choice(positionsAI)
     if randomPosition4 in NHLTeams.used_Positions2:
         print("I picked a position that has already been used. Let me pick again.")
         time.sleep(2)
@@ -372,7 +372,7 @@ def checkPositionAI4():
         
 def checkPositionAI5():
     global randomPosition5
-    randomPosition5 = random.choice(positions)
+    randomPosition5 = random.choice(positionsAI)
     if randomPosition5 in NHLTeams.used_Positions2:
         print("I picked a position that has already been used. Let me pick again.")
         time.sleep(2)
@@ -380,7 +380,7 @@ def checkPositionAI5():
         
 def checkPositionAI6():
     global randomPosition6
-    randomPosition6 = random.choice(positions)
+    randomPosition6 = random.choice(positionsAI)
     if randomPosition6 in NHLTeams.used_Positions2:
         print("I picked a position that has already been used. Let me pick again.")
         time.sleep(2)
@@ -467,6 +467,7 @@ def playerPick1():
     time.sleep(2)
     used_players.append(player)
     used_Positions1.append(your_position)
+    positionsUser.remove(your_position)
     time.sleep(2)
     AIPick1()
     time.sleep(2)
@@ -491,6 +492,7 @@ def AIPick1():
     time.sleep(2)
     used_players.append(AiPlayer1)
     used_Positions2.append(randomPosition)
+    positionsAI.remove(randomPosition)
     time.sleep(2)
     playerPick2()
 
@@ -523,6 +525,7 @@ def playerPick2():
     time.sleep(2)
     used_players.append(player2)
     used_Positions1.append(your_position2)
+    positionsUser.remove(your_position2)
     time.sleep(2)
     AIpick2()
 
@@ -545,6 +548,7 @@ def AIpick2():
     time.sleep(2)
     used_players.append(AiPlayer2)
     used_Positions2.append(randomPosition2)
+    positionsAI.remove(randomPosition2)
     time.sleep(2)
     playerPick3()
 
@@ -577,6 +581,7 @@ def playerPick3():
     time.sleep(2)
     used_players.append(player3)
     used_Positions1.append(your_position3)
+    positionsUser.remove(your_position3)
     time.sleep(2)
     AIpick3()
 
@@ -599,6 +604,7 @@ def AIpick3():
     time.sleep(2)
     used_players.append(AiPlayer3)
     used_Positions2.append(randomPosition3)
+    positionsAI.remove(randomPosition3)
     time.sleep(2)
     playerPick4()
 
@@ -631,6 +637,7 @@ def playerPick4():
     time.sleep(2)
     used_players.append(player4)
     used_Positions1.append(your_position4)
+    positionsUser.remove(your_position4)
     time.sleep(2)
     AIpick4()
 
@@ -653,6 +660,7 @@ def AIpick4():
     time.sleep(2)
     used_players.append(AiPlayer4)
     used_Positions2.append(randomPosition4)
+    positionsAI.remove(randomPosition4)
     time.sleep(2)
     playerPick5()
 
@@ -685,6 +693,7 @@ def playerPick5():
     time.sleep(2)
     used_players.append(player5)
     used_Positions1.append(your_position5)
+    positionsUser.remove(your_position5)
     time.sleep(2)
     AIpick5()
 
@@ -707,6 +716,7 @@ def AIpick5():
     time.sleep(2)
     used_players.append(AiPlayer5)
     used_Positions2.append(randomPosition5)
+    positionsAI.remove(randomPosition5)
     time.sleep(2)
     playerPick6()
 
@@ -739,6 +749,7 @@ def playerPick6():
     time.sleep(2)
     used_players.append(player6)
     used_Positions1.append(your_position6)
+    positionsUser.remove(your_position6)
     time.sleep(2)
     print("Here is your Final Team: ")
     Teamlister1()
@@ -763,6 +774,7 @@ def AIpick6():
     time.sleep(2)
     used_players.append(AiPlayer6)
     used_Positions2.append(randomPosition6)
+    positionsAI.remove(randomPosition6)
     time.sleep(2)
     print("Here is my Final Team: ")
     Teamlister2()
@@ -772,12 +784,7 @@ def AIpick6():
 
 def Teamlister1():
     global PlayerTeam
-    PlayerTeam =  player + " as your " + your_position, 
-    player2 + " as your " + your_position2,
-    player3 + " as your " + your_position3,
-    player4 + " as your " + your_position4,
-    player5 + " as your " + your_position5,
-    player6 + " as your " + your_position6
+    PlayerTeam =  player + " as your " + your_position, player2 + " as your " + your_position2,player3 + " as your " + your_position3,player4 + " as your " + your_position4,player5 + " as your " + your_position5,player6 + " as your " + your_position6
     print(PlayerTeam)
 
 def Teamlister2():
