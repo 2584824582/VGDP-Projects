@@ -1185,7 +1185,7 @@ def checkpositionUserPlayer12():
     elif your_position2 in NHLTeams.used_Positions1:
         print("Please pick a different position. This position has been used.")
         time.sleep(1)
-        redoPosition2()
+        redoPositionplayer12()
 
 def checkpositionUserPlayer13():
     if your_position3 not in NHLTeams.used_Positions1:
@@ -1389,42 +1389,42 @@ def redoPositionplayer11():
     global firstyour_positionplayer1
     print("Which position do you want to pick: (C, RW, LW, Def1, Def2, G) ")
     firstyour_positionplayer1 = input()
-    checkpositionUserplayer21()
+    checkpositionUserplayer11()
 
 def redoPositionplayer12():
-    global your_position2
+    global firstyour_positionplayer2
     print("Which position do you want to pick: (C, RW, LW, Def1, Def2, G) ")
-    your_position2 = input()
-    checkpositionUserplayer22()
+    firstyour_positionplayer2 = input()
+    checkpositionUserplayer12()
 
 def redoPositionplayer13():
     global your_position3
     print("Which position do you want to pick: (C, RW, LW, Def1, Def2, G) ")
     your_position3 = input()
-    checkpositionUserplayer23()
+    checkpositionUserplayer13()
 
 def redoPositionplayer14():
     global your_position4
     print("Which position do you want to pick: (C, RW, LW, Def1, Def2, G) ")
     your_position4 = input()
-    checkpositionUserplayer24()
+    checkpositionUserplayer14()
 
 def redoPositionplayer15():
     global your_position5
     print("Which position do you want to pick: (C, RW, LW, Def1, Def2, G) ")
     your_position5 = input()
-    checkpositionUserplayer25()
+    checkpositionUserplayer15()
 
 def redoPositionplayer16():
     global your_position6
     print("Which position do you want to pick: (C, RW, LW, Def1, Def2, G) ")
     your_position6 = input()
-    checkpositionUserplayer26()
+    checkpositionUserplayer16()
 
 def redoPositionplayer21():
-    global your_position
+    global firstyour_positionplayer2
     print("Which position do you want to pick: (C, RW, LW, Def1, Def2, G) ")
-    your_position = input()
+    firstyour_positionplayer2 = input()
     checkpositionUserplayer21()
 
 def redoPositionplayer22():
@@ -1533,39 +1533,39 @@ def player2Pick1():
     time.sleep(1)
 
 def player1Pick2():
-    global secondTeamChoiceplayer1
-    global secondyour_positionplayer1
-    global secondplayer1
-    global secondTeamAvailablePlayers1
-    print("Round 1")
+    global firstTeamChoiceplayer2
+    global firstyour_positionplayer2
+    global firstplayer2
+    global firstTeamAvailablePlayers2
+    print("Round 2")
     time.sleep(1)
     print("I'll draw a team for you.")
     time.sleep(1)
-    secondTeamChoiceplayer1 = random.choice(teams)
-    print(f"The team I picked is: {secondTeamChoiceplayer1}.")
+    firstTeamChoiceplayer2 = random.choice(teams)
+    print(f"The team I picked is: {firstTeamChoiceplayer2}.")
     time.sleep(1)
     skipTeamTwoPlayers12()
     time.sleep(1)
     print("You pick a position.")
     time.sleep(1)
     print("Which position do you want to pick: (C, RW, LW, Def1, Def2, G) ")
-    secondyour_positionplayer1 = input()
+    firstyour_positionplayer2 = input()
     time.sleep(1)
-    checkpositionUserPlayer1()
-    print(f"You picked: {secondyour_positionplayer1}.")
+    checkpositionUserPlayer12()
+    print(f"You picked: {firstyour_positionplayer2}.")
     time.sleep(1)
-    secondTeamAvailablePlayers1 = secondTeamChoiceplayer1 + secondyour_positionplayer1
-    ListPositionPlayersTwoPlayers1()
+    firstTeamAvailablePlayers2 = firstTeamChoiceplayer2 + firstyour_positionplayer2
+    ListPositionPlayersTwoPlayers12()
     print("Which player do you want to pick?")
     time.sleep(1)
-    secondplayer1 = input()
-    checkplayersUserplayer11()
+    firstplayer2 = input()
+    checkplayersUserplayer12()
     time.sleep(1)
-    print(f"You picked {secondplayer1} as your {secondyour_positionplayer1}.")
+    print(f"You picked {firstplayer2} as your {firstyour_positionplayer2}.")
     time.sleep(1)
-    used_players.append(secondplayer1)
-    used_Positions1.append(secondyour_positionplayer1)
-    positionsUser1.remove(secondyour_positionplayer1)
+    used_players.append(firstplayer2)
+    used_Positions1.append(firstyour_positionplayer2)
+    positionsUser1.remove(firstyour_positionplayer2)
     time.sleep(1)
     #player2Pick2()
     time.sleep(1)
