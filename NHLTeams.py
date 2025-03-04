@@ -8,7 +8,8 @@ teams = [
     "Kraken", "Blues", "Lightning", "Maple_Leafs", "Hockey_Club", 
     "Canucks", "Golden_Knights", "Capitals", "Jets"]
 positionsAI = ["C", "RW", "LW", "Def1", "Def2", "G"]
-positionsUser = ["C", "RW", "LW", "Def1", "Def2", "G"]
+positionsUser1 = ["C", "RW", "LW", "Def1", "Def2", "G"]
+positionsUser2 = ["C", "RW", "LW", "Def1", "Def2", "G"]
 used_players = []
 used_Positions1 = []
 used_Positions2 = []
@@ -21,7 +22,7 @@ DucksDef2 = ["Jackson LaCombe", "Brian Dumoulin", "Radko Gudas", "Pavel Mintyuko
 DucksG = ["John Gibson", "Lukas Dostal"]
 #Bruins
 BruinsC = ["John Beecher", "Charlie Coyle", "Trent Frederic", "Morgan Geekie", "Pavel Zacha", "Elias Lindholm", "Georgi Merkulov", "Matthew Poitras"]
-BruinsLW = ["Brad Marchand", "Trent Frederic", "Taylor Hall", "Oliver Wahlstrom"]
+BruinsLW = ["Brad Marchand", "Trent Frederic", "Oliver Wahlstrom"]
 BruinsRW = ["David Pastrnak", "Justin Brazeau", "Craig Smith", "Jakub Lauko"]
 BruinsDef1 = ["Brandon Carlo", "Hampus Lindholm", "Charlie McAvoy", "Matt Grzelcyk", "Dmitry Orlov", "Mike Reilly", "Connor Clifton", "Mason Lohrei", "Michael Callahan", "Nikita Zadorov"]
 BruinsDef2 = ["Brandon Carlo", "Hampus Lindholm", "Charlie McAvoy", "Matt Grzelcyk", "Dmitry Orlov", "Mike Reilly", "Connor Clifton", "Mason Lohrei", "Michael Callahan", "Nikita Zadorov"]
