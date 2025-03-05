@@ -1695,7 +1695,7 @@ def player1Pick4():
     checkpositionUserPlayer14()
     print(f"You picked: {fourthyour_positionplayer1}.")
     time.sleep(1)
-    fourthTeamAvailablePlayers1 = firstTeamChoiceplayer2 + fourthyour_positionplayer1
+    fourthTeamAvailablePlayers1 = fourthTeamChoiceplayer1 + fourthyour_positionplayer1
     ListPositionPlayers4TwoPlayers14()
     print("Which player do you want to pick?")
     time.sleep(1)
