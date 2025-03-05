@@ -106,7 +106,7 @@ PanthersLW = ["Matthew Tkachuk", "Ryan Lomberg"]
 PanthersRW = ["Sam Reinhart", "Evan Rodrigues"]
 PanthersDef1 = ["Aaron Ekblad", "Gustav Forsling", "Seth Jones", "Dmitri Kulikov", "Uvis Balinskis", "Tobias Bjornfot"]
 PanthersDef2 = ["Aaron Ekblad", "Gustav Forsling", "Seth Jones", "Dmitri Kulikov", "Uvis Balinskis", "Tobias Bjornfot"]
-PanthersG = ["Sergei Bobrovsky", "Chris Driedger"]
+PanthersG = ["Sergei Bobrovsky", "Chris Driedger","Vitek Vanecek"]
 
 #Kings
 KingsC = ["Anze Kopitar", "Phillip Danault", "Quinton Byfield", "Jack Studnicka"]
