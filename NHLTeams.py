@@ -71,7 +71,7 @@ AvalancheG = ["Mackenzie Blackwood", "Pavel Francouz"]
 #Blue Jackets
 Blue_JacketsC = ["Zach Aston-Reese", "Adam Fantilli", "Boone Jenner", "Kent Johnson", "Sean Kuraly", "Joseph LaBate", "Cole Sillinger"]
 Blue_JacketsLW = ["James van Riemsdyk", "Dmitri Voronkov", "Mikael Pyyhtia", "Kirill Marchenko"]
-Blue_JacketsRW = ["Yegor Chinakhov", "Justin Danforth", "Mathieu Olivier"]
+Blue_JacketsRW = ["Yegor Chinakhov", "Justin Danforth", "Mathieu Olivier", "Patrik Laine"]
 Blue_JacketsDef1 = ["Jake Christiansen", "Jack Johnson", "Zach Werenski", "Ivan Provorov", "Jordan Harris", "Erik Gudbranson", "David Jiricek", "Damon Severson", "Dante Fabbro"]
 Blue_JacketsDef2 = ["Jake Christiansen", "Jack Johnson", "Zach Werenski", "Ivan Provorov", "Jordan Harris", "Erik Gudbranson", "David Jiricek", "Damon Severson", "Dante Fabbro"]
 Blue_JacketsG = ["Elvis Merzlikins", "Jonas Korpisalo"]
