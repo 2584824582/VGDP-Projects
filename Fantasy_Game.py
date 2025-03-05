@@ -1542,8 +1542,8 @@ def player1Pick2():
     time.sleep(1)
     print("I'll draw a team for you.")
     time.sleep(1)
-    firstTeamChoiceplayer2 = random.choice(teams)
-    print(f"The team I picked is: {firstTeamChoiceplayer2}.")
+    secondTeamChoiceplayer1 = random.choice(teams)
+    print(f"The team I picked is: {secondTeamChoiceplayer1}.")
     time.sleep(1)
     skipTeamTwoPlayers12()
     time.sleep(1)
@@ -1555,7 +1555,7 @@ def player1Pick2():
     checkpositionUserPlayer12()
     print(f"You picked: {secondyour_positionplayer1}.")
     time.sleep(1)
-    secondTeamAvailablePlayers1 = firstTeamChoiceplayer2 + secondyour_positionplayer1
+    secondTeamAvailablePlayers1 = secondTeamChoiceplayer1 + secondyour_positionplayer1
     ListPositionPlayers2TwoPlayers12()
     print("Which player do you want to pick?")
     time.sleep(1)
@@ -1928,21 +1928,21 @@ print("How many users do you want to play with? 1, or 2?")
 users = input()
 if users == "1":
     print("Do you know the rules? Y/N")
-    if input() == "N" or input() == "n":
+    yesorno = input()
+    if yesorno == "N" or yesorno == "n":
         time.sleep(1)
         rulesAI()
-    elif input() == "Y" or input() == "y":
-        print("Great!")
+    elif yesorno == "Y" or yesorno == "y":
+        print("Great! Let's pick some teams!")
         time.sleep(1)
-    print("Great! Let's pick some teams!")
-    time.sleep(1)
-    playerPick1()
+        playerPick1()
 elif users == "2":
     print("Do you know the rules? Y/N")
-    if input() == "N" or input() == "n":
+    yesorno = input()
+    if yesorno == "N" or yesorno == "n":
         time.sleep(1)
         rulesUsersONLY()
-    elif input() == "Y" or input() == "y":
+    elif yesorno == "Y" or yesorno == "y":
         print("Great! Lets play!")
         time.sleep(1)
         player1Pick1()
