@@ -40,7 +40,7 @@ def rulesUsersONLY():
     print("At the end, ChatGPT will pick a winner!")
     time.sleep(3)
     print("Good Luck!")
-    playerPick1()
+    player1Pick1()
 
 def skipTeamOnePlayer():
     global skip
@@ -866,7 +866,7 @@ def skipTeamTwoPlayers12():
         time.sleep(1)
         print(f"You have {skip} skips left.") 
         time.sleep(1)
-    if skip == 0 and skipchoice == "Y" or skipchoice == "y":
+    elif skip == 0 and skipchoice == "Y" or skipchoice == "y":
         print("You have no more skips left.")
         time.sleep(1)
 
@@ -1106,34 +1106,29 @@ def ListPositionPlayersTwoPlayers11():
         print(f"Here are the applicable players: {globals()[firstTeamAvailablePlayers]}.")
 
 def ListPositionPlayers2TwoPlayers12():
-    secondTeamAvailablePlayers1 = firstTeamChoiceplayer2 + firstyour_positionplayer2
+    secondTeamAvailablePlayers1 = secondTeamChoiceplayer1 + secondyour_positionplayer1
     if secondTeamAvailablePlayers1 in globals():
         print(f"Here are the applicable players: {globals()[secondTeamAvailablePlayers1]}.")
-        print("Which player do you want to pick?")
 
 def ListPositionPlayers3TwoPlayers13():
     thirdTeamAvailablePlayers1 = thirdTeamChoiceplayer1 + thirdyour_positionplayer1
     if thirdTeamAvailablePlayers1 in globals():
         print(f"Here are the applicable players: {globals()[thirdTeamAvailablePlayers1]}.")
-        print("Which player do you want to pick?")
 
 def ListPositionPlayers4TwoPlayers14():
     fourthTeamAvailablePlayers1 = fourthTeamChoiceplayer1 + fourthyour_positionplayer1
     if fourthTeamAvailablePlayers1 in globals():
         print(f"Here are the applicable players: {globals()[fourthTeamAvailablePlayers1]}.")
-        print("Which player do you want to pick?")
 
 def ListPositionPlayers5TwoPlayers15():
     fifthTeamAvailablePlayers1 = fifthTeamChoiceplayer1 + fifthyour_positionplayer1
     if fifthTeamAvailablePlayers1 in globals():
         print(f"Here are the applicable players: {globals()[fifthTeamAvailablePlayers1]}.")
-        print("Which player do you want to pick?")
 
 def ListPositionPlayers6TwoPlayers16():
     sixthTeamAvailablePlayers1 = sixthTeamChoiceplayer1 + sixthyour_positionplayer1
     if sixthTeamAvailablePlayers1 in globals():
         print(f"Here are the applicable players: {globals()[sixthTeamAvailablePlayers1]}.")
-        print("Which player do you want to pick?")
 
 def ListPositionPlayersTwoPlayers21():
     firstTeamAvailablePlayers2 = firstTeamChoiceplayer2 + firstyour_positionplayer2
@@ -1144,31 +1139,26 @@ def ListPositionPlayers2TwoPlayers22():
     secondTeamAvailablePlayers2 = secondTeamChoiceplayer2 + secondyour_positionplayer2
     if secondTeamAvailablePlayers2 in globals():
         print(f"Here are the applicable players: {globals()[secondTeamAvailablePlayers2]}.")
-        print("Which player do you want to pick?")
 
 def ListPositionPlayers3TwoPlayers23():
     thirdTeamAvailablePlayers2 = thirdTeamChoiceplayer2 + thirdyour_positionplayer2
     if thirdTeamAvailablePlayers2 in globals():
         print(f"Here are the applicable players: {globals()[thirdTeamAvailablePlayers2]}.")
-        print("Which player do you want to pick?")
 
 def ListPositionPlayers4TwoPlayers24():
     fourthTeamAvailablePlayers2 = fourthTeamChoiceplayer2 + fourthyour_positionplayer2
     if fourthTeamAvailablePlayers2 in globals():
         print(f"Here are the applicable players: {globals()[fourthTeamAvailablePlayers2]}.")
-        print("Which player do you want to pick?")
 
 def ListPositionPlayers5TwoPlayers25():
     fifthTeamAvailablePlayers2 = fifthTeamChoiceplayer2 + fifthyour_positionplayer2
     if fifthTeamAvailablePlayers2 in globals():
         print(f"Here are the applicable players: {globals()[fifthTeamAvailablePlayers2]}.")
-        print("Which player do you want to pick?")
 
 def ListPositionPlayers6TwoPlayers26():
     sixthTeamAvailablePlayers2 = sixthTeamChoiceplayer2 + sixthyour_positionplayer2
     if sixthTeamAvailablePlayers2 in globals():
         print(f"Here are the applicable players: {globals()[sixthTeamAvailablePlayers2]}.")
-        print("Which player do you want to pick?")
 
 def checkpositionUserPlayer11():
     if firstyour_positionplayer1 not in NHLTeams.used_Positions1:
@@ -1393,9 +1383,9 @@ def redoPositionplayer11():
     checkpositionUserPlayer11()
 
 def redoPositionplayer12():
-    global firstyour_positionplayer2
+    global secondyour_positionplayer1
     print("Which position do you want to pick: (C, RW, LW, Def1, Def2, G) ")
-    firstyour_positionplayer2 = input()
+    secondyour_positionplayer1 = input()
     checkpositionUserPlayer12()
 
 def redoPositionplayer13():
@@ -1780,7 +1770,7 @@ def player1Pick5():
     checkpositionUserPlayer15()
     print(f"You picked: {fifthyour_positionplayer1}.")
     time.sleep(1)
-    fifthTeamAvailablePlayers1 = firstTeamChoiceplayer2 + fifthyour_positionplayer1
+    fifthTeamAvailablePlayers1 = fifthTeamChoiceplayer1 + fifthyour_positionplayer1
     ListPositionPlayers5TwoPlayers15()
     print("Which player do you want to pick?")
     time.sleep(1)
@@ -1791,7 +1781,7 @@ def player1Pick5():
     time.sleep(1)
     used_players.append(fifthplayer1)
     used_Positions1.append(fifthyour_positionplayer1)
-    positionsUser1.remove(fourthyour_positionplayer1)
+    positionsUser1.remove(fifthTeamChoiceplayer1)
     time.sleep(1)
     player2Pick5()
     time.sleep(1)
@@ -1817,7 +1807,7 @@ def player2Pick5():
     checkpositionUserplayer25()
     print(f"You picked: {fifthyour_positionplayer2}.")
     time.sleep(1)
-    fifthTeamAvailablePlayers2 = fourthTeamChoiceplayer2 + fifthyour_positionplayer2
+    fifthTeamAvailablePlayers2 = fifthTeamChoiceplayer2 + fifthyour_positionplayer2
     ListPositionPlayers5TwoPlayers25()
     print("Which player do you want to pick?")
     time.sleep(1)
@@ -1855,7 +1845,7 @@ def player1Pick6():
     checkpositionUserPlayer16()
     print(f"You picked: {sixthyour_positionplayer1}.")
     time.sleep(1)
-    sixthTeamAvailablePlayers1 = firstTeamChoiceplayer2 + sixthyour_positionplayer1
+    sixthTeamAvailablePlayers1 = sixthTeamChoiceplayer1 + sixthyour_positionplayer1
     ListPositionPlayers6TwoPlayers16()
     print("Which player do you want to pick?")
     time.sleep(1)
@@ -1894,7 +1884,7 @@ def player2Pick6():
     checkpositionUserplayer26()
     print(f"You picked: {sixthyour_positionplayer2}.")
     time.sleep(1)
-    sixthTeamAvailablePlayers2 = fourthTeamChoiceplayer2 + sixthyour_positionplayer2
+    sixthTeamAvailablePlayers2 = sixthTeamChoiceplayer2 + sixthyour_positionplayer2
     ListPositionPlayers6TwoPlayers26()
     print("Which player do you want to pick?")
     time.sleep(1)
