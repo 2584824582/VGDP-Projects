@@ -133,11 +133,11 @@ CanadiensDef2 = ["Kaiden Guhle", "Jordan Harris", "David Savard", "Arber Xhekaj"
 CanadiensG = ["Samuel Montembeault", "Jake Allen", "Jakub Dobes"]
 
 #Predators
-PredatorsC = ["Steven Stamkos", "Tommy Novak", "Mark Jankowski", "Jacob Lucchini", "Jonathan Marchessault"]
-PredatorsLW = ["Filip Forsberg", "Zachary L'Heureux", "Colton Sissons"]
+PredatorsC = ["Steven Stamkos", "Mark Jankowski", "Jacob Lucchini", "Jonathan Marchessault"]
+PredatorsLW = ["Michael Bunting", "Filip Forsberg", "Zachary L'Heureux", "Colton Sissons"]
 PredatorsRW = ["Luke Evangelista", "Michael McCarron"]
-PredatorsDef1 = ["Roman Josi", "Brady Skjei", "Jérémy Lauzon", "Andreas Englund", "Adam Wilsby", "Nick Blankenburg", "Luke Schenn"]
-PredatorsDef2 = ["Roman Josi", "Brady Skjei", "Jérémy Lauzon", "Andreas Englund", "Adam Wilsby", "Nick Blankenburg", "Luke Schenn"]
+PredatorsDef1 = ["Roman Josi", "Brady Skjei", "Jérémy Lauzon", "Andreas Englund", "Adam Wilsby", "Nick Blankenburg"]
+PredatorsDef2 = ["Roman Josi", "Brady Skjei", "Jérémy Lauzon", "Andreas Englund", "Adam Wilsby", "Nick Blankenburg"]
 PredatorsG = ["Juuse Saros", "Kevin Lankinen"]
 
 #Devils
@@ -181,19 +181,19 @@ FlyersDef2 = ["Jamie Drysdale", "Erik Johnson", "Rasmus Ristolainen", "Travis Sa
 FlyersG = ["Samuel Ersson", "Ivan Fedotov"]
 
 #Penguins
-PenguinsC = ["Sidney Crosby", "Evgeni Malkin", "Cody Glass", "Lars Eller", "Noel Acciari"]
-PenguinsLW = ["Michael Bunting", "Anthony Beauvillier", "Drew O'Connor", "Valtteri Puustinen"]
+PenguinsC = ["Sidney Crosby", "Evgeni Malkin", "Cody Glass", "Lars Eller", "Noel Acciari", "Tommy Novak"]
+PenguinsLW = ["Anthony Beauvillier", "Drew O'Connor", "Valtteri Puustinen"]
 PenguinsRW = ["Rickard Rakell", "Bryan Rust", "Kevin Hayes", "Jesse Puljujarvi"]
-PenguinsDef1 = ["Ryan Graves", "Matt Grzelcyk", "Pierre-Olivier Joseph", "Ryan Shea", "Kris Letang", "Erik Karlsson", "Jack St. Ivany"]
-PenguinsDef2 = ["Ryan Graves", "Matt Grzelcyk", "Pierre-Olivier Joseph", "Ryan Shea", "Kris Letang", "Erik Karlsson", "Jack St. Ivany"]
+PenguinsDef1 = ["Ryan Graves", "Matt Grzelcyk", "Pierre-Olivier Joseph", "Ryan Shea", "Kris Letang", "Erik Karlsson", "Jack St. Ivany", "Luke Schenn"]
+PenguinsDef2 = ["Ryan Graves", "Matt Grzelcyk", "Pierre-Olivier Joseph", "Ryan Shea", "Kris Letang", "Erik Karlsson", "Jack St. Ivany", "Luke Schenn"]
 PenguinsG = ["Tristan Jarry", "Alex Nedeljikovic"]
 
 #Sharks
 SharksC = ["Macklin Celebrini", "Logan Couture", "Ty Dellandrea", "Thomas Bordeleau", "Nico Sturm"]
 SharksLW = ["William Eklund", "Alexander Barabanov", "Filip Zadina", "Oskar Lindblom"]
 SharksRW = ["Kevin Labanc", "Luke Kunin", "Egor Afanasyev", "Walker Duehr"]
-SharksDef1 = ["Mario Ferraro", "Marc-Edouard Vlasic", "Nikita Okhotiuk", "Jan Rutta", "Matt Benning", "Henry Thrun"]
-SharksDef2 = ["Mario Ferraro", "Marc-Edouard Vlasic", "Nikita Okhotiuk", "Jan Rutta", "Matt Benning", "Henry Thrun"]
+SharksDef1 = ["Mario Ferraro", "Marc-Edouard Vlasic", "Nikita Okhotiuk", "Jan Rutta", "Matt Benning", "Henry Thrun", "Vincent Desharnais"]
+SharksDef2 = ["Mario Ferraro", "Marc-Edouard Vlasic", "Nikita Okhotiuk", "Jan Rutta", "Matt Benning", "Henry Thrun", "Vincent Desharnais]
 SharksG = ["Alexandar Georgiev", "Kappo Kahkonen"]
 
 #Kraken
