@@ -149,12 +149,12 @@ DevilsDef2 = ["Dougie Hamilton", "Jonas Siegenthaler", "Brenden Dillon", "Brett 
 DevilsG = ["Jacob Markstrom", "Jake Allen"]
 
 #Islanders
-IslandersC = ["Mathew Barzal", "Casey Cizikas", "Marc Gatcomb", "Bo Horvat", "Kyle MacLean", "Brock Nelson", "Jean-Gabriel Pageau"]
-IslandersLW = ["Anthony Duclair", "Pierre Engvall", "Anders Lee"]
-IslandersRW = ["Hudson Fasching", "Kyle Palmieri"]
-IslandersDef1 = ["Adam Pelech", "Alexander Romanov", "Ryan Pulock", "Noah Dobson", "Scott Perunovich"]
-IslandersDef2 = ["Adam Pelech", "Alexander Romanov", "Ryan Pulock", "Noah Dobson", "Scott Perunovich"]
-IslandersG = ["Ilya Sorokin", "Semyon Varlamov"]
+IslandersC = ["Mathew Barzal", "Casey Cizikas", "Marc Gatcomb", "Bo Horvat", "Kyle MacLean", "Kyle Palmieri", "Jean-Gabriel Pageau"]
+IslandersLW = ["Anthony Duclair", "Pierre Engvall", "Anders Lee", "Matt Martin"]
+IslandersRW = ["Hudson Fasching", "Simon Holmstrom", "Maxim Tsyplakov"]
+IslandersDef1 = ["Adam Pelech", "Alexander Romanov", "Ryan Pulock", "Noah Dobson", "Scott Perunovich", "Adam Boqvist", "Tony DeAngelo", "Scott Mayfield", "Mike Reilly"]
+IslandersDef2 = ["Adam Pelech", "Alexander Romanov", "Ryan Pulock", "Noah Dobson", "Scott Perunovich", "Adam Boqvist", "Tony DeAngelo", "Scott Mayfield", "Mike Reilly"]
+IslandersG = ["Ilya Sorokin", "Semyon Varlamov", "Marcus Hogberg"]
 
 #Rangers
 RangersC = ["Filip Chytil", "Sam Carrick", "Jonny Brodzinski", "Juuso Parssinen"]
@@ -193,7 +193,7 @@ SharksC = ["Macklin Celebrini", "Logan Couture", "Ty Dellandrea", "Thomas Bordel
 SharksLW = ["William Eklund", "Alexander Barabanov", "Filip Zadina", "Oskar Lindblom"]
 SharksRW = ["Kevin Labanc", "Luke Kunin", "Egor Afanasyev", "Walker Duehr"]
 SharksDef1 = ["Mario Ferraro", "Marc-Edouard Vlasic", "Nikita Okhotiuk", "Jan Rutta", "Matt Benning", "Henry Thrun", "Vincent Desharnais"]
-SharksDef2 = ["Mario Ferraro", "Marc-Edouard Vlasic", "Nikita Okhotiuk", "Jan Rutta", "Matt Benning", "Henry Thrun", "Vincent Desharnais]
+SharksDef2 = ["Mario Ferraro", "Marc-Edouard Vlasic", "Nikita Okhotiuk", "Jan Rutta", "Matt Benning", "Henry Thrun", "Vincent Desharnais"]
 SharksG = ["Alexandar Georgiev", "Kappo Kahkonen"]
 
 #Kraken
