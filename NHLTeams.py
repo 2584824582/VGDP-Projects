@@ -157,11 +157,11 @@ IslandersDef2 = ["Adam Pelech", "Alexander Romanov", "Ryan Pulock", "Noah Dobson
 IslandersG = ["Ilya Sorokin", "Semyon Varlamov", "Marcus Hogberg"]
 
 #Rangers
-RangersC = ["Filip Chytil", "Sam Carrick", "Jonny Brodzinski", "Juuso Parssinen"]
-RangersLW = ["Chris Kreider", "Will Cuylle", "Brett Berard", "Reilly Smith", "Alexis Lafreniere", "Artemi Panarin"]
-RangersRW = ["Mika Zibanejad", "Kaapo Kakko", "Vincent Trocheck", "Julien Gauthier"]
-RangersDef1 = ["Ryan Lindgren", "K'Andre Miller", "Zac Jones", "Adam Fox", "Calvin de Haan", "Will Borgen", "Braden Schneider"]
-RangersDef2 = ["Ryan Lindgren", "K'Andre Miller", "Zac Jones", "Adam Fox", "Calvin de Haan", "Will Borgen", "Braden Schneider"]
+RangersC = ["Mika Zibanejad", "Vincent Trocheck", "Sam Carrick", "Jonny Brodzinski", "Juuso Parssinen", "Matt Rempe", "Adam Edstrom"]
+RangersLW = ["Chris Kreider", "Will Cuylle", "Brett Berard", "JT Miller", "Alexis Lafreniere", "Artemi Panarin", "Brennan Othmann"]
+RangersRW = ["Arthur Kaliyev"]
+RangersDef1 = ["Carson Saucy", "K'Andre Miller", "Zac Jones", "Adam Fox", "Calvin de Haan", "Will Borgen", "Braden Schneider", "Urho Vaakanainen"]
+RangersDef2 = ["Carson Saucy", "K'Andre Miller", "Zac Jones", "Adam Fox", "Calvin de Haan", "Will Borgen", "Braden Schneider", "Urho Vaakanainen"]
 RangersG = ["Igor Shesterkin", "Jonathan Quick"]
 
 #Senators
